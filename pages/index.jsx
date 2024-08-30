@@ -7,6 +7,7 @@ import {
   servicesSliderProps,
   testimonialsSliderProps,
 } from "../src/sliderProps";
+import { useState } from "react";
 const PortfolioIsotope = dynamic(
   () => import("../src/components/PortfolioIsotope"),
   {
@@ -14,6 +15,11 @@ const PortfolioIsotope = dynamic(
   }
 );
 const Index = () => {
+  const [name,setName] = useState('');
+  const [email,setEmail] = useState('');
+  const [subject,setSubject] = useState('');
+  const [message,setMessage] = useState('');
+
   return (
     <Layout pageClassName={"home"}>
       {/* Section - Hero Started */}
@@ -1169,7 +1175,9 @@ const Index = () => {
                           <div className="group">
                             <label>
                               Your Full Name <b>*</b>
-                              <input type="text" name="name" />
+                              <input type="text" name="name" value={name} onChange={(e)=>{
+                                setName(e.target.value)
+                              }} />
                             </label>
                           </div>
                         </div>
@@ -1177,7 +1185,9 @@ const Index = () => {
                           <div className="group">
                             <label>
                               Your Email Address <b>*</b>
-                              <input type="email" name="email" />
+                              <input type="email" name="email" value={email} onChange={(e)=>{
+                                setEmail(e.target.value)
+                              }} />
                             </label>
                           </div>
                         </div>
@@ -1185,7 +1195,9 @@ const Index = () => {
                           <div className="group">
                             <label>
                               Your Subject <b>*</b>
-                              <input type="text" name="subject" />
+                              <input type="text" name="subject" value={subject} onChange={(e)=>{
+                                setSubject(e.target.value)
+                              }} />
                             </label>
                           </div>
                         </div>
@@ -1193,7 +1205,9 @@ const Index = () => {
                           <div className="group">
                             <label>
                               Your Message <b>*</b>
-                              <textarea name="message" defaultValue={""} />
+                              <textarea name="message" defaultValue={message} onChange={(e)=>{
+                                setMessage(e.target.value)
+                              }} />
                             </label>
                           </div>
                         </div>
@@ -1202,9 +1216,8 @@ const Index = () => {
                             * Accept the terms and conditions.
                           </div>
                           <a
-                            href="#"
+                            href={`mailto:jobs@marwan-mostafa.com?subject=${subject}&body= Name: ${name}%20%0AEmail:%20${email}%0AMessage:${message}`}
                             className="btn"
-                            onclick="$('#cform').submit(); return false;"
                           >
                             <span>Send Message</span>
                           </a>
