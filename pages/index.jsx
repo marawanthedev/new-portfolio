@@ -619,16 +619,6 @@ const Index = () => {
               >
                 <span> Testimonials </span>
               </h2>
-              <div
-                className="m-subtitle splitting-text-anim-1 scroll-animate"
-                data-splitting="words"
-                data-animate="active"
-              >
-                <span>
-                  {" "}
-                  what <b>Customers Say</b>
-                </span>
-              </div>
             </div>
           </div>
         </div>
@@ -1064,16 +1054,7 @@ const Index = () => {
                 </div>
               </div>
             </div>
-            <div className="load-more">
-              <Link legacyBehavior href="/blog">
-                <a
-                  className="btn scrolla-element-anim-1 scroll-animate"
-                  data-animate="active"
-                >
-                  <span>View Blog</span>
-                </a>
-              </Link>
-            </div>
+       
             <div className="lui-bgtitle">
               <span> Blog </span>
             </div>
