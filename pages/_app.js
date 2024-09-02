@@ -84,6 +84,29 @@ const App = ({ Component, pageProps }) => {
         {/* Favicon */}
         <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon" />
         <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Person",
+              "name": "Marwan Mostafa",
+              "url": "https://marwan-mostafa.com",
+              "image": "https://media.licdn.com/dms/image/v2/D5603AQFxXXsduhEuFA/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1677151760768?e=1730937600&v=beta&t=mHq_4Lgg5SkIwDGQQAea9ZjsiCO9XSl25C4aMTJHk9I",
+              "sameAs": [
+                "https://www.linkedin.com/in/marwan-ahmed-6112801a6/",
+                "https://github.com/marawanthedev",
+                "https://x.com/MarwanNassefz"
+              ],
+              "jobTitle": "React Developer",
+              "worksFor": {
+                "@type": "Organization",
+                "name": "tigerlab"
+              }
+            })
+          }}
+        />
       </Head>
       {loader && <PreLoader />}
       <Component {...pageProps} />
