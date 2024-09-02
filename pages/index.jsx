@@ -637,7 +637,7 @@ const Index = () => {
                     <img
                       decoding="async"
                       src="assets/images/testimonials/jin.jpeg"
-                      alt="Jin Kun Yong"
+                      alt="Marwan Mostafa"
                     />
                     <div className="icon">
                       <svg
@@ -692,7 +692,7 @@ const Index = () => {
                     <img
                       decoding="async"
                       src="assets/images/testimonials/nazreen.jpeg"
-                      alt="Nazreen mohamed"
+                      alt="Marwan Mostafa"
                     />
                     <div className="icon">
                       <svg
@@ -741,7 +741,7 @@ const Index = () => {
                     <img
                       decoding="async"
                       src="assets/images/testimonials/maad.jpeg"
-                      alt="Maad Yasser"
+                        alt="Marwan Mostafa"
                     />
                     <div className="icon">
                       <svg
@@ -789,7 +789,7 @@ const Index = () => {
                     <img
                       decoding="async"
                       src="assets/images/testi4-3.jpg"
-                      alt="Jennifer Smith"
+                      alt="Marwan Mostafa"
                     />
                     <div className="icon">
                       <svg
@@ -839,7 +839,7 @@ const Index = () => {
                     <img
                       decoding="async"
                       src="assets/images/testi4-5.jpg"
-                      alt="Paul Freeman"
+                      alt="Marwan Mostafa"
                     />
                     <div className="icon">
                       <svg
@@ -931,7 +931,7 @@ const Index = () => {
                         <img
                           decoding="async"
                           src="assets/images/blogs/compound-pattern.jpeg"
-                          alt="The Main Thing For The Designer"
+                          alt="Marwan Mostafa"
                         />
                       </a>
                     </Link>
@@ -974,7 +974,7 @@ const Index = () => {
                         <img
                           decoding="async"
                           src="assets/images/blogs/use-transition.jpeg"
-                          alt="Follow Your Own Design Process"
+                          alt="Marwan Mostafa"
                         />
                       </a>
                     </Link>
@@ -1018,7 +1018,7 @@ const Index = () => {
                         <img
                           decoding="async"
                           src="assets/images/blogs/react-snippets.jpeg"
-                          alt="Usability Secrets to Create Better Interfaces"
+                          alt="Marwan Mostafa"
                         />
                       </a>
                     </Link>
