@@ -1,0 +1,23 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://marwan-mostafa.com/sitemap.xml
+
+# Directories
+Disallow: /api/
+Disallow: /_next/
+Disallow: /admin/
+
+# Specific Files
+Disallow: /404
+Disallow: /500
+
+# Disallow certain file types from being crawled
+Disallow: /*.json$
+Disallow: /*.map$
+
+# Crawling delays to prevent server overload
+Crawl-delay: 10
+
+# SEO-related comments
+# This robots.txt file is optimized for a personal portfolio website showcasing Marwan Mostafa’s expertise in React.js development, with exposure to backend technologies, NFT, insurtech, and marketing sectors. Open to remote work opportunities.
