@@ -15,10 +15,10 @@ const PortfolioIsotope = dynamic(
   }
 );
 const Index = () => {
-  const [name,setName] = useState('');
-  const [email,setEmail] = useState('');
-  const [subject,setSubject] = useState('');
-  const [message,setMessage] = useState('');
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [subject, setSubject] = useState('');
+  const [message, setMessage] = useState('');
 
   return (
     <Layout pageClassName={"home"}>
@@ -115,6 +115,7 @@ const Index = () => {
                   decoding="async"
                   src="assets/images/marwan.png"
                   alt="Marwan Mostafa"
+                  title="marwan developer personal picture"
                 />
                 <span className="circle circle-1" />
                 <span
@@ -631,157 +632,160 @@ const Index = () => {
               data-animate="active"
             >
               <SwiperSlide className="swiper-slide">
-             <Link target="_blank" style={{color:"inherit",textDecoration:'none'}} href="https://www.linkedin.com/in/marwan-ahmed-6112801a6/details/recommendations/">
-             <div className="testimonials-item">
-                  <div className="image">
-                    <img
-                      decoding="async"
-                      src="assets/images/testimonials/jin.jpeg"
-                      alt="Marwan Mostafa"
-                    />
-                    <div className="icon">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        xmlnsXlink="http://www.w3.org/1999/xlink"
-                        width="44px"
-                        height="34px"
-                      >
-                        <path
-                          fillRule="evenodd"
-                          strokeWidth="2px"
-                          stroke="rgb(0, 0, 0)"
-                          fill="rgb(41, 165, 135)"
-                          d="M17.360,8.325 C15.490,5.563 11.616,4.762 8.705,6.536 C6.901,7.635 5.815,9.533 5.826,11.567 C5.828,14.854 8.637,17.516 12.101,17.515 C13.290,17.513 14.456,17.192 15.460,16.587 C14.967,17.975 14.049,19.457 12.537,20.942 C11.934,21.533 11.951,22.476 12.574,23.048 C13.198,23.619 14.192,23.604 14.794,23.012 C20.384,17.515 19.658,11.539 17.360,8.333 L17.360,8.325 ZM32.407,8.325 C30.538,5.563 26.663,4.762 23.752,6.536 C21.949,7.635 20.863,9.533 20.873,11.567 C20.875,14.854 23.685,17.516 27.148,17.515 C28.338,17.513 29.503,17.192 30.508,16.587 C30.015,17.975 29.097,19.457 27.585,20.942 C26.982,21.533 26.999,22.476 27.622,23.048 C28.245,23.619 29.239,23.604 29.842,23.012 C35.432,17.515 34.706,11.539 32.407,8.333 L32.407,8.325 Z"
-                        />
-                      </svg>
-                    </div>
-                  </div>
-                  <div className="text lui-text">
-                    <div>
-                      <p>
-                        Quick to understand project requirements and does not
-                        hesitate to clarify and communicate with the manager.
-                        Marwan is cautious of delivery time and pays good
-                        attention to details. For any technical use cases or
-                        issues missed during the project briefing, Marwan will
-                        solve them on his initiative without straying from the
-                        main requirements. Happy to work with him again.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="info">
-                    <h6 className="name">
-                      <span>Jin Kun Yong</span>
-                    </h6>
-                    <div className="author">
-                      <span>CCo-founder of Re:Crave</span>
-                    </div>
-                  </div>
-                  <div
-                    className="bg-img"
-                    style={{
-                      backgroundImage: "url(assets/images/pat-2.png)",
-                    }}
-                  />
-                </div></Link>
-              </SwiperSlide>
-              <SwiperSlide className="swiper-slide">
-               <Link target="_blank" style={{color:"inherit",textDecoration:'none'}} href="https://www.linkedin.com/in/marwan-ahmed-6112801a6/details/recommendations/">
-               <div className="testimonials-item">
-                  <div className="image">
-                    <img
-                      decoding="async"
-                      src="assets/images/testimonials/nazreen.jpeg"
-                      alt="Marwan Mostafa"
-                    />
-                    <div className="icon">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        xmlnsXlink="http://www.w3.org/1999/xlink"
-                        width="44px"
-                        height="34px"
-                      >
-                        <path
-                          fillRule="evenodd"
-                          strokeWidth="2px"
-                          stroke="rgb(0, 0, 0)"
-                          fill="rgb(41, 165, 135)"
-                          d="M17.360,8.325 C15.490,5.563 11.616,4.762 8.705,6.536 C6.901,7.635 5.815,9.533 5.826,11.567 C5.828,14.854 8.637,17.516 12.101,17.515 C13.290,17.513 14.456,17.192 15.460,16.587 C14.967,17.975 14.049,19.457 12.537,20.942 C11.934,21.533 11.951,22.476 12.574,23.048 C13.198,23.619 14.192,23.604 14.794,23.012 C20.384,17.515 19.658,11.539 17.360,8.333 L17.360,8.325 ZM32.407,8.325 C30.538,5.563 26.663,4.762 23.752,6.536 C21.949,7.635 20.863,9.533 20.873,11.567 C20.875,14.854 23.685,17.516 27.148,17.515 C28.338,17.513 29.503,17.192 30.508,16.587 C30.015,17.975 29.097,19.457 27.585,20.942 C26.982,21.533 26.999,22.476 27.622,23.048 C28.245,23.619 29.239,23.604 29.842,23.012 C35.432,17.515 34.706,11.539 32.407,8.333 L32.407,8.325 Z"
-                        />
-                      </svg>
-                    </div>
-                  </div>
-                  <div className="text lui-text">
-                    <div>
-                      <p style={{paddingBottom:"67.5px",paddingTop:"67.5px"}}>
-                      Marwan worked on a project I was helping out with. He was proactive in understanding the requirements and saw the work through in a way that upheld the quality to a high standard.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="info">
-                    <h6 className="name">
-                      <span>Nazreen Mohamed</span>
-                    </h6>
-                    <div className="author">
-                      <span>DevRel Engineer @SOON</span>
-                    </div>
-                  </div>
-                  <div
-                    className="bg-img"
-                    style={{
-                      backgroundImage: "url(assets/images/pat-2.png)",
-                    }}
-                  />
-                </div></Link>
-              </SwiperSlide>
-              <SwiperSlide className="swiper-slide">
-               <Link target="_blank" style={{color:"inherit",textDecoration:'none'}} href="https://www.linkedin.com/in/marwan-ahmed-6112801a6/details/recommendations/">
-               <div className="testimonials-item">
-                  <div className="image">
-                    <img
-                      decoding="async"
-                      src="assets/images/testimonials/maad.jpeg"
+                <Link target="_blank" style={{ color: "inherit", textDecoration: 'none' }} href="https://www.linkedin.com/in/marwan-ahmed-6112801a6/details/recommendations/">
+                  <div className="testimonials-item">
+                    <div className="image">
+                      <img
+                        decoding="async"
+                        src="assets/images/testimonials/jin.jpeg"
                         alt="Marwan Mostafa"
+                        title="marwan developer Jin Kun testinmonial"
+                      />
+                      <div className="icon">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          xmlnsXlink="http://www.w3.org/1999/xlink"
+                          width="44px"
+                          height="34px"
+                        >
+                          <path
+                            fillRule="evenodd"
+                            strokeWidth="2px"
+                            stroke="rgb(0, 0, 0)"
+                            fill="rgb(41, 165, 135)"
+                            d="M17.360,8.325 C15.490,5.563 11.616,4.762 8.705,6.536 C6.901,7.635 5.815,9.533 5.826,11.567 C5.828,14.854 8.637,17.516 12.101,17.515 C13.290,17.513 14.456,17.192 15.460,16.587 C14.967,17.975 14.049,19.457 12.537,20.942 C11.934,21.533 11.951,22.476 12.574,23.048 C13.198,23.619 14.192,23.604 14.794,23.012 C20.384,17.515 19.658,11.539 17.360,8.333 L17.360,8.325 ZM32.407,8.325 C30.538,5.563 26.663,4.762 23.752,6.536 C21.949,7.635 20.863,9.533 20.873,11.567 C20.875,14.854 23.685,17.516 27.148,17.515 C28.338,17.513 29.503,17.192 30.508,16.587 C30.015,17.975 29.097,19.457 27.585,20.942 C26.982,21.533 26.999,22.476 27.622,23.048 C28.245,23.619 29.239,23.604 29.842,23.012 C35.432,17.515 34.706,11.539 32.407,8.333 L32.407,8.325 Z"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                    <div className="text lui-text">
+                      <div>
+                        <p>
+                          Quick to understand project requirements and does not
+                          hesitate to clarify and communicate with the manager.
+                          Marwan is cautious of delivery time and pays good
+                          attention to details. For any technical use cases or
+                          issues missed during the project briefing, Marwan will
+                          solve them on his initiative without straying from the
+                          main requirements. Happy to work with him again.
+                        </p>
+                      </div>
+                    </div>
+                    <div className="info">
+                      <h6 className="name">
+                        <span>Jin Kun Yong</span>
+                      </h6>
+                      <div className="author">
+                        <span>CCo-founder of Re:Crave</span>
+                      </div>
+                    </div>
+                    <div
+                      className="bg-img"
+                      style={{
+                        backgroundImage: "url(assets/images/pat-2.png)",
+                      }}
                     />
-                    <div className="icon">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        xmlnsXlink="http://www.w3.org/1999/xlink"
-                        width="44px"
-                        height="34px"
-                      >
-                        <path
-                          fillRule="evenodd"
-                          strokeWidth="2px"
-                          stroke="rgb(0, 0, 0)"
-                          fill="rgb(41, 165, 135)"
-                          d="M17.360,8.325 C15.490,5.563 11.616,4.762 8.705,6.536 C6.901,7.635 5.815,9.533 5.826,11.567 C5.828,14.854 8.637,17.516 12.101,17.515 C13.290,17.513 14.456,17.192 15.460,16.587 C14.967,17.975 14.049,19.457 12.537,20.942 C11.934,21.533 11.951,22.476 12.574,23.048 C13.198,23.619 14.192,23.604 14.794,23.012 C20.384,17.515 19.658,11.539 17.360,8.333 L17.360,8.325 ZM32.407,8.325 C30.538,5.563 26.663,4.762 23.752,6.536 C21.949,7.635 20.863,9.533 20.873,11.567 C20.875,14.854 23.685,17.516 27.148,17.515 C28.338,17.513 29.503,17.192 30.508,16.587 C30.015,17.975 29.097,19.457 27.585,20.942 C26.982,21.533 26.999,22.476 27.622,23.048 C28.245,23.619 29.239,23.604 29.842,23.012 C35.432,17.515 34.706,11.539 32.407,8.333 L32.407,8.325 Z"
-                        />
-                      </svg>
+                  </div></Link>
+              </SwiperSlide>
+              <SwiperSlide className="swiper-slide">
+                <Link target="_blank" style={{ color: "inherit", textDecoration: 'none' }} href="https://www.linkedin.com/in/marwan-ahmed-6112801a6/details/recommendations/">
+                  <div className="testimonials-item">
+                    <div className="image">
+                      <img
+                        decoding="async"
+                        src="assets/images/testimonials/nazreen.jpeg"
+                        alt="Marwan Mostafa"
+                        title="marwan developer Nazreen AWS testinmonial"
+                      />
+                      <div className="icon">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          xmlnsXlink="http://www.w3.org/1999/xlink"
+                          width="44px"
+                          height="34px"
+                        >
+                          <path
+                            fillRule="evenodd"
+                            strokeWidth="2px"
+                            stroke="rgb(0, 0, 0)"
+                            fill="rgb(41, 165, 135)"
+                            d="M17.360,8.325 C15.490,5.563 11.616,4.762 8.705,6.536 C6.901,7.635 5.815,9.533 5.826,11.567 C5.828,14.854 8.637,17.516 12.101,17.515 C13.290,17.513 14.456,17.192 15.460,16.587 C14.967,17.975 14.049,19.457 12.537,20.942 C11.934,21.533 11.951,22.476 12.574,23.048 C13.198,23.619 14.192,23.604 14.794,23.012 C20.384,17.515 19.658,11.539 17.360,8.333 L17.360,8.325 ZM32.407,8.325 C30.538,5.563 26.663,4.762 23.752,6.536 C21.949,7.635 20.863,9.533 20.873,11.567 C20.875,14.854 23.685,17.516 27.148,17.515 C28.338,17.513 29.503,17.192 30.508,16.587 C30.015,17.975 29.097,19.457 27.585,20.942 C26.982,21.533 26.999,22.476 27.622,23.048 C28.245,23.619 29.239,23.604 29.842,23.012 C35.432,17.515 34.706,11.539 32.407,8.333 L32.407,8.325 Z"
+                          />
+                        </svg>
+                      </div>
                     </div>
-                  </div>
-                  <div className="text lui-text">
-                    <div>
-                      <p>
-                      I had the pleasure of working with Marwan at quickDesk and I can confidently say that he is an exceptional front-end software developer. His expertise in React is outstanding and He has a great ability to develop intuitive and user-friendly interfaces. He always takes a pride on the quality of his work. I highly recommend him for any front-end software development role, and especially for those utilizing React.
-                      </p>
+                    <div className="text lui-text">
+                      <div>
+                        <p style={{ paddingBottom: "67.5px", paddingTop: "67.5px" }}>
+                          Marwan worked on a project I was helping out with. He was proactive in understanding the requirements and saw the work through in a way that upheld the quality to a high standard.
+                        </p>
+                      </div>
                     </div>
-                  </div>
-                  <div className="info">
-                    <h6 className="name">
-                      <span>Maad Yasser</span>
-                    </h6>
-                    <div className="author">
-                      <span>Former colleague @QuickDesk</span>
+                    <div className="info">
+                      <h6 className="name">
+                        <span>Nazreen Mohamed</span>
+                      </h6>
+                      <div className="author">
+                        <span>DevRel Engineer @SOON</span>
+                      </div>
                     </div>
-                  </div>
-                  <div
-                    className="bg-img"
-                    style={{
-                      backgroundImage: "url(assets/images/pat-2.png)",
-                    }}
-                  />
-                </div></Link>
+                    <div
+                      className="bg-img"
+                      style={{
+                        backgroundImage: "url(assets/images/pat-2.png)",
+                      }}
+                    />
+                  </div></Link>
+              </SwiperSlide>
+              <SwiperSlide className="swiper-slide">
+                <Link target="_blank" style={{ color: "inherit", textDecoration: 'none' }} href="https://www.linkedin.com/in/marwan-ahmed-6112801a6/details/recommendations/">
+                  <div className="testimonials-item">
+                    <div className="image">
+                      <img
+                        decoding="async"
+                        src="assets/images/testimonials/maad.jpeg"
+                        alt="Marwan Mostafa"
+                        title="marwan developer MAAD testinmonial"
+                      />
+                      <div className="icon">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          xmlnsXlink="http://www.w3.org/1999/xlink"
+                          width="44px"
+                          height="34px"
+                        >
+                          <path
+                            fillRule="evenodd"
+                            strokeWidth="2px"
+                            stroke="rgb(0, 0, 0)"
+                            fill="rgb(41, 165, 135)"
+                            d="M17.360,8.325 C15.490,5.563 11.616,4.762 8.705,6.536 C6.901,7.635 5.815,9.533 5.826,11.567 C5.828,14.854 8.637,17.516 12.101,17.515 C13.290,17.513 14.456,17.192 15.460,16.587 C14.967,17.975 14.049,19.457 12.537,20.942 C11.934,21.533 11.951,22.476 12.574,23.048 C13.198,23.619 14.192,23.604 14.794,23.012 C20.384,17.515 19.658,11.539 17.360,8.333 L17.360,8.325 ZM32.407,8.325 C30.538,5.563 26.663,4.762 23.752,6.536 C21.949,7.635 20.863,9.533 20.873,11.567 C20.875,14.854 23.685,17.516 27.148,17.515 C28.338,17.513 29.503,17.192 30.508,16.587 C30.015,17.975 29.097,19.457 27.585,20.942 C26.982,21.533 26.999,22.476 27.622,23.048 C28.245,23.619 29.239,23.604 29.842,23.012 C35.432,17.515 34.706,11.539 32.407,8.333 L32.407,8.325 Z"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                    <div className="text lui-text">
+                      <div>
+                        <p>
+                          I had the pleasure of working with Marwan at quickDesk and I can confidently say that he is an exceptional front-end software developer. His expertise in React is outstanding and He has a great ability to develop intuitive and user-friendly interfaces. He always takes a pride on the quality of his work. I highly recommend him for any front-end software development role, and especially for those utilizing React.
+                        </p>
+                      </div>
+                    </div>
+                    <div className="info">
+                      <h6 className="name">
+                        <span>Maad Yasser</span>
+                      </h6>
+                      <div className="author">
+                        <span>Former colleague @QuickDesk</span>
+                      </div>
+                    </div>
+                    <div
+                      className="bg-img"
+                      style={{
+                        backgroundImage: "url(assets/images/pat-2.png)",
+                      }}
+                    />
+                  </div></Link>
               </SwiperSlide>
               <SwiperSlide className="swiper-slide">
                 <div className="testimonials-item">
@@ -790,6 +794,8 @@ const Index = () => {
                       decoding="async"
                       src="assets/images/testi4-3.jpg"
                       alt="Marwan Mostafa"
+                      title="marwan developer MAAD testinmonial"
+
                     />
                     <div className="icon">
                       <svg
@@ -975,6 +981,7 @@ const Index = () => {
                           decoding="async"
                           src="assets/images/blogs/use-transition.jpeg"
                           alt="Marwan Mostafa"
+                          title="marwan developer use transition video"
                         />
                       </a>
                     </Link>
@@ -1019,6 +1026,7 @@ const Index = () => {
                           decoding="async"
                           src="assets/images/blogs/react-snippets.jpeg"
                           alt="Marwan Mostafa"
+                          title="marwan developer react snippets video"
                         />
                       </a>
                     </Link>
@@ -1054,7 +1062,7 @@ const Index = () => {
                 </div>
               </div>
             </div>
-       
+
             <div className="lui-bgtitle">
               <span> Blog </span>
             </div>
@@ -1107,7 +1115,7 @@ const Index = () => {
                       <span> GMT +3 </span>
                     </div>
                   </div>
-               
+
                   <div
                     className="numbers-item scrolla-element-anim-1 scroll-animate"
                     data-animate="active"
@@ -1119,7 +1127,7 @@ const Index = () => {
                       <span> Email </span>
                     </div>
                     <div className="lui-text">
-                      <span> <a target="_blank" href="mailto:jobs@marwan-mostafa.com" style={{color:"inherit"}}>jobs@marwan-mostafa.com</a> </span>
+                      <span> <a target="_blank" href="mailto:jobs@marwan-mostafa.com" style={{ color: "inherit" }}>jobs@marwan-mostafa.com</a> </span>
                     </div>
                   </div>
                   <div
@@ -1156,7 +1164,7 @@ const Index = () => {
                           <div className="group">
                             <label>
                               Your Full Name <b>*</b>
-                              <input type="text" name="name" value={name} onChange={(e)=>{
+                              <input type="text" name="name" value={name} onChange={(e) => {
                                 setName(e.target.value)
                               }} />
                             </label>
@@ -1166,7 +1174,7 @@ const Index = () => {
                           <div className="group">
                             <label>
                               Your Email Address <b>*</b>
-                              <input type="email" name="email" value={email} onChange={(e)=>{
+                              <input type="email" name="email" value={email} onChange={(e) => {
                                 setEmail(e.target.value)
                               }} />
                             </label>
@@ -1176,7 +1184,7 @@ const Index = () => {
                           <div className="group">
                             <label>
                               Your Subject <b>*</b>
-                              <input type="text" name="subject" value={subject} onChange={(e)=>{
+                              <input type="text" name="subject" value={subject} onChange={(e) => {
                                 setSubject(e.target.value)
                               }} />
                             </label>
@@ -1186,7 +1194,7 @@ const Index = () => {
                           <div className="group">
                             <label>
                               Your Message <b>*</b>
-                              <textarea name="message" defaultValue={message} onChange={(e)=>{
+                              <textarea name="message" defaultValue={message} onChange={(e) => {
                                 setMessage(e.target.value)
                               }} />
                             </label>
