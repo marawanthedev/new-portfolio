@@ -114,7 +114,7 @@ const Index = () => {
                 <img
                   decoding="async"
                   src="assets/images/marwan.png"
-                  alt="<b>Zoé</b> Miller"
+                  alt="Marwan Mostafa"
                 />
                 <span className="circle circle-1" />
                 <span
