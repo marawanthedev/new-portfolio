@@ -4,6 +4,7 @@ import PreLoader from "../src/layouts/PreLoader";
 import "../styles/globals.css";
 const App = ({ Component, pageProps }) => {
   const [loader, setLoader] = useState(true);
+  const canonicalUrl = `https://marwan-mostafa.com${router.asPath}`;
   useEffect(() => {
     setTimeout(() => {
       setLoader(false);
@@ -19,6 +20,7 @@ const App = ({ Component, pageProps }) => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="HandheldFriendly" content="true" />
         <meta name="author" content="bslthemes" />
+        <link rel="canonical" href={canonicalUrl} />
         {/* Fonts */}
         <link
           rel="stylesheet"
