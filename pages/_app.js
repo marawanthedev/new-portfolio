@@ -4,7 +4,7 @@ import PreLoader from "../src/layouts/PreLoader";
 import "../styles/globals.css";
 const App = ({ Component, pageProps }) => {
   const [loader, setLoader] = useState(true);
-  const canonicalUrl = `https://marwan-mostafa.com${router.asPath}`;
+  const canonicalUrl = `https://marwan-mostafa.com`;
   useEffect(() => {
     setTimeout(() => {
       setLoader(false);
