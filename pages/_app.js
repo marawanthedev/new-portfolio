@@ -14,12 +14,24 @@ const App = ({ Component, pageProps }) => {
   return (
     <Fragment>
       <Head>
-        <title>Marwan Mostafa</title>
+        <title>Marwan Mostafa - React.js Frontend Developer</title>
         <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="HandheldFriendly" content="true" />
-        <meta name="author" content="bslthemes" />
+        
+        <meta name="description" content="Marwan Mostafa, a React.js frontend developer with 3 years of experience in TypeScript, Node.js, and AWS. Remote work ready and available for hiring." />
+        <meta name="keywords" content="Marwan Mostafa, React.js, frontend developer, remote work, TypeScript, Node.js, backend, AWS, hiring" />
+        <meta name="author" content="Marwan Mostafa" />
+        <meta property="og:title" content="Marwan Mostafa - React.js Frontend Developer" />
+        <meta property="og:description" content="Marwan Mostafa, a React.js frontend developer with 3 years of experience in TypeScript, Node.js, and AWS. Remote work ready and available for hiring." />
+        <meta property="og:image" content="https://x.com/MarwanNassefz/photo" /> 
+        <meta property="og:url" content="https://marwan-mostafa.com/" />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Marwan Mostafa - React.js Frontend Developer" />
+        <meta name="twitter:description" content="Marwan Mostafa, a React.js frontend developer with 3 years of experience in TypeScript, Node.js, and AWS. Remote work ready and available for hiring." />
+        <meta name="twitter:image" content="https://x.com/MarwanNassefz/photo" /> 
         <link rel="canonical" href={canonicalUrl} />
         {/* Fonts */}
         <link
