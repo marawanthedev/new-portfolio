@@ -7,6 +7,7 @@ import {
 } from "../utils";
 import Footer from "./Footer";
 import Header from "./Header";
+import GA4Script from "../../util/Ga4Script";
 
 const Layout = ({ children, pageClassName }) => {
   useEffect(() => {
@@ -29,6 +30,7 @@ const Layout = ({ children, pageClassName }) => {
 
   return (
     <Fragment>
+      <GA4Script measurementId='G-Y8LGJCC61B' />
       <div className="container-page">
         <Header />
         {/* Wrapper */}
