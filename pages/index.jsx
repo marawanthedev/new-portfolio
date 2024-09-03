@@ -53,7 +53,7 @@ const Index = () => {
                   </h1>
                   <div className="label lui-subtitle">
                     {" "}
-                    I am <strong>React Web Developer</strong>
+                    I am <strong>Software Engineer</strong>
                   </div>
                 </div>
                 <div className="description">
