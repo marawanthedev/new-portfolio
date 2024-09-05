@@ -676,7 +676,7 @@ const Index = () => {
                         <span>Jin Kun Yong</span>
                       </h6>
                       <div className="author">
-                        <span>CCo-founder of Re:Crave</span>
+                        <span>Co-founder of Re:Crave</span>
                       </div>
                     </div>
                     <div
