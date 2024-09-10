@@ -59,7 +59,7 @@ const Index = () => {
                 <div className="description">
                   <div>
                     <p>
-                      I have over 3 years of front-end development experience,
+                      I have over 4 years of front-end development experience,
                       specializing in React, Redux, and TypeScript. My work
                       spans various industries, including insuretech and NFT,
                       where I've built complex forms, integrated with blockchain
