@@ -21,7 +21,7 @@ const App = ({ Component, pageProps }) => {
         <meta name="HandheldFriendly" content="true" />
         
         <meta name="description" content="Marwan Nassef, a React.js frontend developer with 3 years of experience in TypeScript , AI and LLM enthusiast. available for hiring." />
-        <meta name="keywords" content="Marwan Nassef, Marwan Nassef, Marwan Developer, Marwan frontend, AWS,, React.js, frontend developer, remote work, TypeScript, Node.js, backend, AWS, hiring" />
+        <meta name="keywords" content="Marwan Nassef, Marwan Nassef, Marwan Developer, Marwan frontend, AWS,, React.js, frontend developer, remote work, TypeScript, Node.js, backend, AWS, hiring, AI, LLM, OpenAI, Chatbot" />
         <meta name="author" content="Marwan Nassef" />
         <meta property="og:title" content="Marwan Nassef -Software Engineer|ReactJS|LLM" />
         <meta property="og:description" content="Marwan Nassef, a React.js frontend developer with 3 years of experience in TypeScript , AI and LLM enthusiast. available for hiring." />
