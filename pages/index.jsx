@@ -80,7 +80,7 @@ const Index = () => {
                     <a
                       target="_blank"
                       rel="nofollow"
-                      href="https://www.linkedin.com/in/marwan-ahmed-6112801a6/"
+                      href="https://www.linkedin.com/in/marwan-nassef-6112801a6/"
                     >
                       <i aria-hidden="true" className="fab fa-linkedin" />
                     </a>
