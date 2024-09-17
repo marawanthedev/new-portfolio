@@ -109,11 +109,11 @@ const App = ({ Component, pageProps }) => {
               "url": "https://marwan-mostafa.com",
               "image": "https://media.licdn.com/dms/image/v2/D5603AQFxXXsduhEuFA/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1677151760768?e=1730937600&v=beta&t=mHq_4Lgg5SkIwDGQQAea9ZjsiCO9XSl25C4aMTJHk9I",
               "sameAs": [
-                "https://www.linkedin.com/in/marwan-ahmed-6112801a6/",
+                "https://www.linkedin.com/in/marwan-mostafa-6112801a6/",
                 "https://github.com/marawanthedev",
                 "https://x.com/MarwanNassefz"
               ],
-              "jobTitle": "React Developer",
+              "jobTitle": "Software Engineer | React",
               "worksFor": {
                 "@type": "Organization",
                 "name": "tigerlab"

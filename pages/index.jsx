@@ -80,7 +80,7 @@ const Index = () => {
                     <a
                       target="_blank"
                       rel="nofollow"
-                      href="https://www.linkedin.com/in/marwan-nassef-6112801a6/"
+                      href="https://www.linkedin.com/in/marwan-mostafa-6112801a6/"
                     >
                       <i aria-hidden="true" className="fab fa-linkedin" />
                     </a>
@@ -632,7 +632,7 @@ const Index = () => {
               data-animate="active"
             >
               <SwiperSlide className="swiper-slide">
-                <Link target="_blank" style={{ color: "inherit", textDecoration: 'none' }} href="https://www.linkedin.com/in/marwan-ahmed-6112801a6/details/recommendations/">
+                <Link target="_blank" style={{ color: "inherit", textDecoration: 'none' }} href="https://www.linkedin.com/in/marwan-mostafa-6112801a6/details/recommendations/?detailScreenTabIndex=0">
                   <div className="testimonials-item">
                     <div className="image">
                       <img
@@ -688,7 +688,7 @@ const Index = () => {
                   </div></Link>
               </SwiperSlide>
               <SwiperSlide className="swiper-slide">
-                <Link target="_blank" style={{ color: "inherit", textDecoration: 'none' }} href="https://www.linkedin.com/in/marwan-ahmed-6112801a6/details/recommendations/">
+                <Link target="_blank" style={{ color: "inherit", textDecoration: 'none' }} href="https://www.linkedin.com/in/marwan-mostafa-6112801a6/details/recommendations/?detailScreenTabIndex=0">
                   <div className="testimonials-item">
                     <div className="image">
                       <img
@@ -738,7 +738,7 @@ const Index = () => {
                   </div></Link>
               </SwiperSlide>
               <SwiperSlide className="swiper-slide">
-                <Link target="_blank" style={{ color: "inherit", textDecoration: 'none' }} href="https://www.linkedin.com/in/marwan-ahmed-6112801a6/details/recommendations/">
+                <Link target="_blank" style={{ color: "inherit", textDecoration: 'none' }} href="https://www.linkedin.com/in/marwan-mostafa-6112801a6/details/recommendations/?detailScreenTabIndex=0">
                   <div className="testimonials-item">
                     <div className="image">
                       <img
