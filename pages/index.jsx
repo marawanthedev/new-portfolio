@@ -140,7 +140,7 @@ const Index = () => {
                   <ul>
                     <li>
                       <span className="num">
-                        3 <strong>+</strong>
+                        4 <strong>+</strong>
                       </span>
                       <span className="value">
                         Years of <strong>Experience</strong>
