@@ -46,7 +46,7 @@ const PortfolioIsotope = ({ noViewMore }) => {
           >
             All
           </a>
-          <a
+          {/* <a
             className={`c-pointer lui-subtitle ${activeBtn(
               "insuretech"
             )}`}
@@ -54,7 +54,7 @@ const PortfolioIsotope = ({ noViewMore }) => {
             data-href=".sorting-insuretech"
           >
             Insuretech
-          </a>
+          </a> */}
           <a
             className={`c-pointer lui-subtitle ${activeBtn("sorting-web3")}`}
             onClick={handleFilterKeyChange("sorting-web3")}
