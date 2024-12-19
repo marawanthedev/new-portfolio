@@ -17,7 +17,7 @@ const educationData = [
     startYear: "2015",
     endYear: "2018",
   },
-  
+
 ];
 
 const experienceData = [
@@ -25,7 +25,7 @@ const experienceData = [
     id: 1,
     title: "React Developer (Remote)",
     company: "tigerlab",
-    dec: "I've been focused on building insurance policy user sales journeys for companies like Sportscover Europe, UKG UK courier, and Complectus UK. Additionally, I've developed automation scripts to streamline repetitive tasks and worked on customizing Git using hooks to better align with our company's needs.",
+    dec: "I've been focused on building insurance policy user sales journeys for companies across Europe and the United States. Additionally, I've developed automation scripts to streamline repetitive tasks and worked on customizing Git using hooks to better align with our company's needs.",
     startYear: "Feb 2023",
     endYear: false,
   },
@@ -91,15 +91,13 @@ const Resume = () => {
                 {educationData.map((education, i) => (
                   <div
                     key={education.id}
-                    className={`history-item lui-collapse-item scroll-animate ${
-                      educationToggle === education.id ? "opened" : ""
-                    }`}
+                    className={`history-item lui-collapse-item scroll-animate ${educationToggle === education.id ? "opened" : ""
+                      }`}
                     data-animate="active"
                   >
                     <h6
-                      className={`name lui-collapse-btn ${
-                        educationToggle == education.id ? "active" : ""
-                      }`}
+                      className={`name lui-collapse-btn ${educationToggle == education.id ? "active" : ""
+                        }`}
                       onClick={() =>
                         setEducationToggle(
                           educationToggle == education.id ? null : education.id
@@ -138,16 +136,14 @@ const Resume = () => {
               <div className="history-items">
                 {experienceData.map((experience) => (
                   <div
-                    className={`history-item lui-collapse-item scroll-animate ${
-                      experience.id == experienceToggle ? "opened" : ""
-                    }`}
+                    className={`history-item lui-collapse-item scroll-animate ${experience.id == experienceToggle ? "opened" : ""
+                      }`}
                     data-animate="active"
                     key={experience.id}
                   >
                     <h6
-                      className={`name lui-collapse-btn ${
-                        experienceToggle == experience.id ? " active" : ""
-                      }`}
+                      className={`name lui-collapse-btn ${experienceToggle == experience.id ? " active" : ""
+                        }`}
                       onClick={() => setExperienceToggle(experience.id)}
                     >
                       <span> {experience.title} </span>

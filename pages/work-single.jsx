@@ -14,25 +14,7 @@ const WorkSingle = () => {
     <Layout pageClassName={"portfolio-template"}>
       {/* Section Started Heading */}
       <section className="section section-inner started-heading">
-        {/* Heading */}
-        <div className="container">
-          <div className="m-titles align-left">
-            <h1
-              className="m-title splitting-text-anim-1 scroll-animate"
-              data-splitting="words"
-              data-animate="active"
-            >
-              <span>Ukg Courier</span>
-            </h1>
-            <div
-              className="m-subtitle splitting-text-anim-1 scroll-animate"
-              data-splitting="words"
-              data-animate="active"
-            >
-              <span>Insuretech</span>
-            </div>
-          </div>
-        </div>
+
         {/* Details */}
         <div className="v-line v-line-right v-line-top">
           <div className="container">
@@ -89,31 +71,6 @@ const WorkSingle = () => {
         </div>
       </div>
       {/* Section - Description */}
-      <section className="section section-inner">
-        <div className="container">
-          <div className="row">
-            <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-              <div className="post-content">
-                <h4>Description</h4>
-              </div>
-            </div>
-            <div className="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-              <div className="post-content">
-                <p>
-                UKG Courier, primarily a B2B platform, now features a B2C variant designed to enhance functionality for UKG insurance company agents and their customers. This addition allows agents to create delivery insurance policies, generate quotations with pricing, and review policy details seamlessly.
-                </p>
-              </div>
-            </div>
-            <div className="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-              <div className="post-content">
-                <p>
-                Customers benefit from a smooth payment process through the B2C application, which integrates seamlessly with the B2B system. Agents can input policyholder details, manage quotations, handle payments, and ensure that policy details are sent directly to the customer’s email, providing a streamlined and efficient service for both agents and clients.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
       {/* Section - Gallery */}
       <div className="section section-inner">
         <div className="container">
