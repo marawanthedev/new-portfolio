@@ -1,0 +1,52 @@
+config:
+  # This is a test server run by team Artillery
+  # It's designed to be highly scalable
+  target: https://marwan-mostafa.com/
+  phases:
+    - duration: 60
+      arrivalRate: 1
+      rampTo: 5
+      name: Warm up phase
+    - duration: 45
+      arrivalRate: 5
+      rampTo: 10
+      name: Ramp up load
+    # - duration: 30
+    #   arrivalRate: 10
+    #   rampTo: 30
+    #   name: Spike phase
+  # Load & configure a couple of useful plugins
+  # https://docs.art/reference/extensions
+  plugins:
+    ensure: {}
+    apdex: {}
+    metrics-by-endpoint: {}
+  apdex:
+    threshold: 100
+  ensure:
+    thresholds:
+      # Set LCP threshold (e.g., 2.5 seconds)
+      - name: "http_req_duration"
+        target: "5"
+        duration: "60s"
+        count: 100
+        abortOnFail: true
+      # Set FID threshold (e.g., 100 ms)
+      - name: "first_input_delay"
+        target: "350ms"
+        duration: "60s"
+        count: 100
+        abortOnFail: true
+      # Set CLS threshold (e.g., 0.1)
+      - name: "cumulative_layout_shift"
+        target: "0.3"
+        duration: "60s"
+        count: 100
+        abortOnFail: true
+scenarios:
+  - flow:
+      - loop:
+          - get:
+              url: '/'
+          - think: 1
+        count: 20

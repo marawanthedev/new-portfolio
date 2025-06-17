@@ -14,6 +14,66 @@ const Header = () => {
   }, [day]);
 
   const [pageToggle, setPageToggle] = useState(false);
+  const [menuToggled, setMenuToggled] = useState(false)
+
+
+
+  useEffect(() => {
+
+    const focusableElements = document.querySelectorAll(
+      '.menu-full-overlay a, .menu-full-overlay button, .menu-full-overlay [tabindex]:not([tabindex="-1"])'
+    );
+    const first = focusableElements[0];
+    const last = focusableElements[focusableElements.length - 1];
+    console.log(focusableElements)
+
+    const handleEsc = (event) => {
+      if (event.keyCode === 27 && menuToggled) {
+        toggleMenu(event)
+        setMenuToggled(false)
+      }
+    }
+
+    function announce(message) {
+      const region = document.getElementById('aria-live-region');
+      if (region) {
+        region.textContent = '';
+        setTimeout(() => {
+          region.textContent = message;
+        }, 10); // slight delay to ensure screen reader picks up the change
+      }
+    }
+
+    const trapFocus = (e) => {
+      if (e.key === 'Tab') {
+        if (e.shiftKey) {
+          if (document.activeElement === first) {
+            e.preventDefault();
+            last.focus();
+          }
+        } else {
+          if (document.activeElement === last) {
+            e.preventDefault();
+            first.focus();
+          }
+        }
+      }
+
+      if (e.key === 'Escape') {
+        toggleMenu(e)
+        setMenuToggled(false);
+        announce('Menu closed');
+      }
+    };
+
+    document.addEventListener('keydown', trapFocus)
+
+    return () => {
+      document.removeEventListener('keydown', handleEsc)
+    }
+  }, [menuToggled])
+
+
 
   return (
     <Fragment>
@@ -23,14 +83,14 @@ const Header = () => {
           <div className="row">
             <div className="col-xs-4 col-sm-4 col-md-4 col-lg-4">
               {/* logo */}
-              <div className="logo">
+              <div className="logo" >
                 <Link href="/" legacyBehavior>
-                  <a>
+                  <a className="focus-element" aria-label="Link to Marwan Mostafa homepage">
                     <img
                       width={228}
                       height={38}
                       src="assets/images/MarwanLogo.png"
-                      alt=""
+                      alt="Marwan Mostafa Logo"
                     />
                   </a>
                 </Link>
@@ -38,15 +98,22 @@ const Header = () => {
             </div>
             <div className="col-xs-8 col-sm-8 col-md-8 col-lg-8 align-right">
               {/* switcher btn */}
+              <span id="themeDesc" className="sr-only">
+                Toggles between light and dark mode
+              </span>
+
               <a
                 href="#"
-                className={`switcher-btn ${day ? "" : "active"}`}
+                className={`switcher-btn focus-element ${day ? "" : "active"}`}
+                aria-label={day ? "Activate dark mode" : "Activate light mode"}
+                aria-describedby="themeDesc"
+                aria-pressed={!day}
                 onClick={(e) => {
                   e.preventDefault();
                   setDay(!day);
                 }}
               >
-                <span className="sw-before">
+                <span className="sw-before" aria-hidden="true">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width={23}
@@ -62,7 +129,7 @@ const Header = () => {
                     />
                   </svg>
                 </span>
-                <span className="sw-after">
+                <span className="sw-after" aria-hidden="true">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="22.22"
@@ -80,7 +147,10 @@ const Header = () => {
                 </span>
               </a>
               {/* menu btn */}
-              <a href="#" className="menu-btn" onClick={(e) => toggleMenu(e)}>
+              <a href="#" className="menu-btn focus-element" aria-label={`${menuToggled ? "close" : 'open'} navigation menu`} aria-pressed={menuToggled} onClick={(e) => {
+                toggleMenu(e)
+                setMenuToggled(true)
+              }}>
                 <span />
                 <span />
               </a>
@@ -96,17 +166,17 @@ const Header = () => {
                             <li className="menu-item">
                               <Link legacyBehavior href="/">
                                 <a
-                                  className="splitting-text-anim-2"
+                                  className="splitting-text-anim-2 focus-element"
                                   data-splitting="chars"
                                 >
                                   Home
                                 </a>
                               </Link>
                             </li>
-                       
+
                             <li className="menu-item">
                               <a
-                                className="splitting-text-anim-2"
+                                className="splitting-text-anim-2 focus-element"
                                 data-splitting="chars"
                                 href="/#skills-section"
                                 onClick={() => linkClick()}
@@ -116,7 +186,7 @@ const Header = () => {
                             </li>
                             <li className="menu-item">
                               <a
-                                className="splitting-text-anim-2"
+                                className="splitting-text-anim-2 focus-element"
                                 data-splitting="chars"
                                 href="/#works-section"
                                 onClick={() => linkClick()}
@@ -126,7 +196,7 @@ const Header = () => {
                             </li>
                             <li className="menu-item">
                               <a
-                                className="splitting-text-anim-2"
+                                className="splitting-text-anim-2 focus-element"
                                 data-splitting="chars"
                                 href="/#resume-section"
                                 onClick={() => linkClick()}
@@ -136,7 +206,7 @@ const Header = () => {
                             </li>
                             <li className="menu-item">
                               <a
-                                className="splitting-text-anim-2"
+                                className="splitting-text-anim-2 focus-element"
                                 data-splitting="chars"
                                 href="/#testimonials-sec
                                 onClick={() => linkClick()}tion"
@@ -146,7 +216,7 @@ const Header = () => {
                             </li>
                             <li className="menu-item">
                               <a
-                                className="splitting-text-anim-2"
+                                className="splitting-text-anim-2 focus-element"
                                 data-splitting="chars"
                                 href="/#contact-section"
                                 onClick={() => linkClick()}
@@ -154,20 +224,39 @@ const Header = () => {
                                 Contact
                               </a>
                             </li>
-                       
+
                           </ul>
                         </div>
                         {/* social */}
                         <div className="menu-social-links">
-                        <a target="_blank" rel="nofollow" href="https://github.com/marawanthedev">
-                      <i aria-hidden="true" className="fab fa-github" />
-                    </a>
-                    <a target="_blank" rel="nofollow" href="https://www.linkedin.com/in/marwan-ahmed-6112801a6/">
-                      <i aria-hidden="true" className="fab fa-linkedin" />
-                    </a>
-                    <a target="_blank" rel="nofollow" href="https://www.youtube.com/@codewithmarwan">
-                      <i aria-hidden="true" className="fab fa-youtube" />
-                    </a>
+                          <a target="_blank" rel="nofollow" className="focus-element" aria-label="Visit Marwan on Github" href="https://github.com/marawanthedev">
+                            <i aria-hidden="true" className="fab fa-github" />
+                          </a>
+                          <a target="_blank" rel="nofollow" className="focus-element" aria-label="Connect with Marwan on Linkedin" href="https://www.linkedin.com/in/marwan-ahmed-6112801a6/">
+                            <i aria-hidden="true" className="fab fa-linkedin" />
+                          </a>
+                          <a target="_blank" rel="nofollow" className="focus-element" aria-label="Watch Marwan on Yotube" href="https://www.youtube.com/@codewithmarwan">
+                            <i aria-hidden="true" className="fab fa-youtube" />
+                          </a>
+
+                          <a
+                            href="#"
+                            tabIndex="0"
+                            className=" sr-only"
+                            onFocus={() => console.log('Instruction focused')}
+                            onClick={(e) => e.preventDefault()}
+                            aria-label="End of menu. Press Escape to close."
+                          >
+                            End of menu. Press Escape to close.
+                          </a>
+
+                          <div
+                            id="aria-live-region"
+                            aria-live="polite"
+                            aria-atomic="true"
+                            className="sr-only"
+                          ></div>
+
                         </div>
                         <div className="v-line-block">
                           <span />

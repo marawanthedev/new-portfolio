@@ -143,7 +143,7 @@ const Index = () => {
                         4 <strong>+</strong>
                       </span>
                       <span className="value">
-                        Years of <strong>Experience</strong>
+                        Years of <strong className="years">Experience</strong>
                       </span>
                     </li>
                     {/* <li>
