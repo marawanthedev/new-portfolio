@@ -1635,6 +1635,8 @@ hr {
 	align-items: center;
 }
 
+
+
 .focus-element:focus-visible {
 	outline: 1px solid #088567;
 	outline-offset: 10px;

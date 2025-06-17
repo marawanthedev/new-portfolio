@@ -81,9 +81,8 @@ const PortfolioIsotope = ({ noViewMore }) => {
             E-Commerce
           </a>
         </div>
-        <div className="works-items works-masonry-items row">
-
-          <div className="works-col col-xs-12 col-sm-12 col-md-12 col-lg-12 sorting-web3 ">
+        <ul className="works-items works-masonry-items row list-none focus-element" aria-label="Projects" tabIndex={0} role="list" style={{ listStyleType: 'none' }}>
+          <li className="works-col col-xs-12 col-sm-12 col-md-12 col-lg-12 sorting-web3 focus-element" tabIndex={0} aria-label="RareApepes NFT Project">
             <div
               className="works-item scrolla-element-anim-1 scroll-animate"
               data-animate="active"
@@ -94,8 +93,9 @@ const PortfolioIsotope = ({ noViewMore }) => {
                     <a target="_blank">
                       <img
                         decoding="async"
+                        className="focus-element"
                         src="assets/images/projects/rareapepes/zombies.jpeg"
-                        alt="zombies"
+                        alt="Rare Apepes Landing Page Hero Banner"
                       />
                       <span className="overlay" />
                     </a>
@@ -103,19 +103,19 @@ const PortfolioIsotope = ({ noViewMore }) => {
                 </div>
               </div>
               <div className="desc">
-                <span className="category"> Web3,NFT </span>
+                <span className="category focus-element" tabIndex={0}> Web3,NFT </span>
                 <h5 className="name">
                   <Link legacyBehavior href="https://www.rareapepes.com">
-                    <a target="_blank">RareApepes</a>
+                    <a target="_blank" className="focus-element">RareApepes</a>
                   </Link>
                 </h5>
                 <div className="text">
-                  <p>
-                    RareApePe is an innovative NFT platform where users can connect their blockchain wallets to mint unique NFTs, generate custom memes, and explore a vibrant digital art community. The website offers a seamless experience for NFT enthusiasts to create, share, and engage with exclusive digital assets.
+                  <p className="focus-element" tabIndex={0}>
+                    Innovative NFT platform where users can connect their blockchain wallets to mint unique NFTs, generate custom memes, and explore a vibrant digital art community...
                   </p>
                 </div>
                 <Link legacyBehavior href="https://www.rareapepes.com/">
-                  <a className="lnk" target="_blank">See project</a>
+                  <a className="lnk focus-element" aria-label="View Website" target="_blank">See project</a>
                 </Link>
               </div>
               <div
@@ -125,9 +125,9 @@ const PortfolioIsotope = ({ noViewMore }) => {
                 }}
               />
             </div>
-          </div>
+          </li>
 
-          <div className="works-col col-xs-12 col-sm-12 col-md-12 col-lg-12 sorting-gifting ">
+          <li className="works-col col-xs-12 col-sm-12 col-md-12 col-lg-12 sorting-gifting focus-element" tabIndex={0} aria-label="Recrave Project">
             <div
               className="works-item scrolla-element-anim-1 scroll-animate"
               data-animate="active"
@@ -138,8 +138,9 @@ const PortfolioIsotope = ({ noViewMore }) => {
                     <a target="_blank">
                       <img
                         decoding="async"
+                        className="focus-element"
                         src="assets/images/projects/recrave/landing.png"
-                        alt="Kana"
+                        alt="Recrave Landing page"
                       />
                       <span className="overlay" />
                     </a>
@@ -147,19 +148,19 @@ const PortfolioIsotope = ({ noViewMore }) => {
                 </div>
               </div>
               <div className="desc">
-                <span className="category"> Gifting </span>
+                <span className="category focus-element" tabIndex={0}> Gifting </span>
                 <h5 className="name">
                   <Link legacyBehavior href="https://admindashboard.marwan-mostafa.com">
-                    <a target="_blank">Recrave</a>
+                    <a target="_blank" className="focus-element">Recrave</a>
                   </Link>
                 </h5>
                 <div className="text">
-                  <p>
-                    ReCrave's internal dashboard streamlines the management of orders, vendors, and products, ensuring smooth operations. While the public site mirrors the functionality, the dashboard is designed for internal use only, safeguarding their real data while offering a comprehensive view of business activities.
+                  <p className="focus-element" tabIndex={0}>
+                    ReCrave's internal dashboard streamlines the management of orders, vendors, and products, ensuring smooth operations...
                   </p>
                 </div>
                 <Link legacyBehavior href="https://admindashboard.marwan-mostafa.com">
-                  <a className="lnk" target="_blank">See project</a>
+                  <a className="lnk focus-element" aria-label="view recrave project" target="_blank">See project</a>
                 </Link>
               </div>
               <div
@@ -169,9 +170,9 @@ const PortfolioIsotope = ({ noViewMore }) => {
                 }}
               />
             </div>
-          </div>
+          </li>
 
-          <div className="works-col col-xs-12 col-sm-12 col-md-12 col-lg-12 sorting-ecommerce ">
+          <li className="works-col col-xs-12 col-sm-12 col-md-12 col-lg-12 sorting-ecommerce" aria-label="Train Hard Project" tabIndex={0}>
             <div
               className="works-item scrolla-element-anim-1 scroll-animate"
               data-animate="active"
@@ -182,8 +183,9 @@ const PortfolioIsotope = ({ noViewMore }) => {
                     <a target="_blank">
                       <img
                         decoding="async"
+                        className="focus-element"
                         src="assets/images/projects/trainhard/products.jpeg"
-                        alt="Supplements"
+                        alt="Train Hard Landing page"
                       />
                       <span className="overlay" />
                     </a>
@@ -191,19 +193,19 @@ const PortfolioIsotope = ({ noViewMore }) => {
                 </div>
               </div>
               <div className="desc">
-                <span className="category"> E-Commerce, Supplements </span>
+                <span className="category focus-element" tabIndex={0}> E-Commerce, Supplements </span>
                 <h5 className="name">
                   <Link legacyBehavior href="https://trainhardeg.com/">
-                    <a target="_blank">TrainHard</a>
+                    <a target="_blank" className="focus-element">TrainHard</a>
                   </Link>
                 </h5>
                 <div className="text">
-                  <p>
-                    TrainHard is a premier supplements store in Egypt, proudly serving customers for over three years. Their website has been a trusted destination for high-quality fitness and health supplements, offering a wide range of products to support fitness enthusiasts and athletes in their wellness journeys.
+                  <p className="focus-element" tabIndex={0}>
+                    TrainHard is a premier supplements store in Egypt, proudly serving customers for over three years...
                   </p>
                 </div>
                 <Link legacyBehavior href="https://trainhardeg.com/">
-                  <a className="lnk" target="_blank">See project</a>
+                  <a className="lnk focus-element" aria-label="View Train hard project" target="_blank">See project</a>
                 </Link>
               </div>
               <div
@@ -213,13 +215,14 @@ const PortfolioIsotope = ({ noViewMore }) => {
                 }}
               />
             </div>
-          </div>
-        </div>
+          </li>
+        </ul>
+
         {!noViewMore && (
           <div className="load-more-link">
             <Link legacyBehavior href="/works">
               <a
-                className="btn scrolla-element-anim-1 scroll-animate"
+                className="btn scrolla-element-anim-1 scroll-animate focus-element"
                 data-animate="active"
               >
                 <span>View More</span>

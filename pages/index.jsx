@@ -35,30 +35,31 @@ const Index = () => {
                 className="content scrolla-element-anim-1 scroll-animate"
                 data-animate="active"
               >
-                <div className="titles">
-                  <div className="lui-subtitle">
-                    <span>
+                <div className="titles focus-element" tabIndex={0}>
+                  <div className="lui-subtitle" >
+                    <span >
                       {" "}
                       Hello, <b>my name is</b>
                     </span>
                   </div>
                   <h1
                     className="title splitting-text-anim-1 scroll-animate"
-                    data-splitting="chars"
-                    data-animate="active"
+                  // data-splitting="chars"
+                  // data-animate="active"
                   >
                     <span>
                       <b>Marwan</b> Mostafa{" "}
                     </span>
                   </h1>
-                  <div className="label lui-subtitle">
-                    {" "}
-                    I am <strong>Software Engineer</strong>
-                  </div>
+
+                </div>
+                <div className="label lui-subtitle focus-element" tabIndex={0}>
+                  {" "}
+                  I am <strong>Software Engineer</strong>
                 </div>
                 <div className="description">
                   <div>
-                    <p>
+                    <p className="focus-element" tabIndex={0}>
                       I have over 4 years of front-end development experience,
                       specializing in React, Redux, and TypeScript. My work
                       spans various industries, including insuretech and NFT,
@@ -73,6 +74,8 @@ const Index = () => {
                     <a
                       target="_blank"
                       rel="nofollow"
+                      className="focus-element"
+                      aria-label="Checkout my Github"
                       href="https://github.com/marawanthedev"
                     >
                       <i aria-hidden="true" className="fab fa-github" />
@@ -80,6 +83,8 @@ const Index = () => {
                     <a
                       target="_blank"
                       rel="nofollow"
+                      className="focus-element"
+                      aria-label="Connect with Me on Linkedin"
                       href="https://www.linkedin.com/in/marwan-mostafa-6112801a6/"
                     >
                       <i aria-hidden="true" className="fab fa-linkedin" />
@@ -87,10 +92,14 @@ const Index = () => {
                     <a
                       target="_blank"
                       rel="nofollow"
+                      className="focus-element"
+                      aria-label="Watch Me on Yotube"
                       href="https://www.youtube.com/@codewithmarwan"
                     >
                       <i aria-hidden="true" className="fab fa-youtube" />
                     </a>
+
+
                   </div>
                 </div>
                 <div className="bts">
@@ -98,11 +107,11 @@ const Index = () => {
                     target="_blank"
                     href="https://drive.google.com/file/d/1G2HmWJDikt48tdka-EZ1w7ltriEETTTY/view?usp=sharing"
                     className="btn"
+                    aria-label="Download my CV"
                   >
-                    <span>Download CV</span>
+                    Download CV
                   </a>
-                  <a href="#skills-section" className="btn-lnk">
-                    {" "}
+                  <a href="#skills-section" aria-label="View My Skills" className="btn-lnk focus-element">
                     My Skills{" "}
                   </a>
                 </div>
@@ -169,17 +178,19 @@ const Index = () => {
           <div className="container">
             <div className="m-titles align-center">
               <h2
-                className="m-title splitting-text-anim-1 scroll-animate"
+                className="m-title splitting-text-anim-1 focus-element scroll-animate"
                 data-splitting="words"
                 data-animate="active"
+                tabIndex={0}
                 style={{ marginTop: "20px" }}
               >
-                <span> Professional Skills </span>
+                Professional Skills
               </h2>
               <div
-                className="m-subtitle splitting-text-anim-1 scroll-animate"
+                className="m-subtitle splitting-text-anim-1 scroll-animate focus-element"
                 data-splitting="words"
                 data-animate="active"
+                tabIndex={0}
                 style={{ marginTop: "10px" }}
               >
                 <span>
@@ -194,375 +205,62 @@ const Index = () => {
         <div className="v-line v-line-left">
           <div className="container">
             <div className="row">
-              <div className="col-xs-6 col-sm-4 col-md-3 col-lg-3">
-                <div className="skills-items">
-                  <div
-                    className="skills-item scrolla-element-anim-1 scroll-animate"
-                    data-animate="active"
+              <ul className="skills-list row " role="list" style={{ listStyleType: "none" }}>
+                {[
+                  "ReactJS",
+                  "TypeScript",
+                  "Next.js",
+                  "React Query",
+                  "Formik",
+                  "Redux",
+                  "MUI",
+                  "Tailwind CSS",
+                  "Microfrontend",
+                  "Jest",
+                  "Cypress",
+                  "Frontend Monitoring",
+                  "Performance Optimization",
+                  "Google Analytics",
+                  "Google Tag Manager",
+                  "Docker",
+                  "Web3",
+                  "Smart Contracts Integration",
+                  "SASS",
+                  "Git",
+                  "Jira",
+                  "Scrum",
+                  "Familiar with AWS",
+                  "Familiar with Node.js",
+                  "Familiar with Redis",
+                  "Familiar with MongoDB",
+                  "Familiar with Prisma",
+                  "Familiar with OpenAI",
+                ].map((skill, i) => (
+                  <li
+                    key={i}
+                    className="col-xs-6 col-sm-4 col-md-3 col-lg-3 skills-items focus-element list-style-none"
+                    role="listitem"
+                    tabIndex={0}
                   >
-                    <h6 className="name">
-                      <span> ReactJS </span>
-                    </h6>
-                  </div>
-                </div>
-              </div>
-
-              <div className="col-xs-6 col-sm-4 col-md-3 col-lg-3">
-                <div className="skills-items">
-                  <div
-                    className="skills-item scrolla-element-anim-1 scroll-animate"
-                    data-animate="active"
-                  >
-                    <h6 className="name">
-                      <span> TypeScript </span>
-                    </h6>
-                  </div>
-                </div>
-              </div>
-
-              <div className="col-xs-6 col-sm-4 col-md-3 col-lg-3">
-                <div className="skills-items">
-                  <div
-                    className="skills-item scrolla-element-anim-1 scroll-animate"
-                    data-animate="active"
-                  >
-                    <h6 className="name">
-                      <span> Next.js </span>
-                    </h6>
-                  </div>
-                </div>
-              </div>
-
-              <div className="col-xs-6 col-sm-4 col-md-3 col-lg-3">
-                <div className="skills-items">
-                  <div
-                    className="skills-item scrolla-element-anim-1 scroll-animate"
-                    data-animate="active"
-                  >
-                    <h6 className="name">
-                      <span> React Query </span>
-                    </h6>
-                  </div>
-                </div>
-              </div>
-
-              <div className="col-xs-6 col-sm-4 col-md-3 col-lg-3">
-                <div className="skills-items">
-                  <div
-                    className="skills-item scrolla-element-anim-1 scroll-animate"
-                    data-animate="active"
-                  >
-                    <h6 className="name">
-                      <span> Formik </span>
-                    </h6>
-                  </div>
-                </div>
-              </div>
-
-              <div className="col-xs-6 col-sm-4 col-md-3 col-lg-3">
-                <div className="skills-items">
-                  <div
-                    className="skills-item scrolla-element-anim-1 scroll-animate"
-                    data-animate="active"
-                  >
-                    <h6 className="name">
-                      <span> Redux </span>
-                    </h6>
-                  </div>
-                </div>
-              </div>
-
-              <div className="col-xs-6 col-sm-4 col-md-3 col-lg-3">
-                <div className="skills-items">
-                  <div
-                    className="skills-item scrolla-element-anim-1 scroll-animate"
-                    data-animate="active"
-                  >
-                    <h6 className="name">
-                      <span> MUI </span>
-                    </h6>
-                  </div>
-                </div>
-              </div>
-
-              <div className="col-xs-6 col-sm-4 col-md-3 col-lg-3">
-                <div className="skills-items">
-                  <div
-                    className="skills-item scrolla-element-anim-1 scroll-animate"
-                    data-animate="active"
-                  >
-                    <h6 className="name">
-                      <span> Tailwind CSS </span>
-                    </h6>
-                  </div>
-                </div>
-              </div>
-
-              <div className="col-xs-6 col-sm-4 col-md-3 col-lg-3">
-                <div className="skills-items">
-                  <div
-                    className="skills-item scrolla-element-anim-1 scroll-animate"
-                    data-animate="active"
-                  >
-                    <h6 className="name">
-                      <span> Microfrontend </span>
-                    </h6>
-                  </div>
-                </div>
-              </div>
-
-              <div className="col-xs-6 col-sm-4 col-md-3 col-lg-3">
-                <div className="skills-items">
-                  <div
-                    className="skills-item scrolla-element-anim-1 scroll-animate"
-                    data-animate="active"
-                  >
-                    <h6 className="name">
-                      <span> Jest </span>
-                    </h6>
-                  </div>
-                </div>
-              </div>
-
-              <div className="col-xs-6 col-sm-4 col-md-3 col-lg-3">
-                <div className="skills-items">
-                  <div
-                    className="skills-item scrolla-element-anim-1 scroll-animate"
-                    data-animate="active"
-                  >
-                    <h6 className="name">
-                      <span> Cypress </span>
-                    </h6>
-                  </div>
-                </div>
-              </div>
-
-              <div className="col-xs-6 col-sm-4 col-md-3 col-lg-3">
-                <div className="skills-items">
-                  <div
-                    className="skills-item scrolla-element-anim-1 scroll-animate"
-                    data-animate="active"
-                  >
-                    <h6 className="name">
-                      <span> Frontend Monitoring </span>
-                    </h6>
-                  </div>
-                </div>
-              </div>
-
-              <div className="col-xs-6 col-sm-4 col-md-3 col-lg-3">
-                <div className="skills-items">
-                  <div
-                    className="skills-item scrolla-element-anim-1 scroll-animate"
-                    data-animate="active"
-                  >
-                    <h6 className="name">
-                      <span> Performance Optimization </span>
-                    </h6>
-                  </div>
-                </div>
-              </div>
-
-              <div className="col-xs-6 col-sm-4 col-md-3 col-lg-3">
-                <div className="skills-items">
-                  <div
-                    className="skills-item scrolla-element-anim-1 scroll-animate"
-                    data-animate="active"
-                  >
-                    <h6 className="name">
-                      <span> Google Analytics </span>
-                    </h6>
-                  </div>
-                </div>
-              </div>
-
-              <div className="col-xs-6 col-sm-4 col-md-3 col-lg-3">
-                <div className="skills-items">
-                  <div
-                    className="skills-item scrolla-element-anim-1 scroll-animate"
-                    data-animate="active"
-                  >
-                    <h6 className="name">
-                      <span> Google Tag Manager </span>
-                    </h6>
-                  </div>
-                </div>
-              </div>
-
-              <div className="col-xs-6 col-sm-4 col-md-3 col-lg-3">
-                <div className="skills-items">
-                  <div
-                    className="skills-item scrolla-element-anim-1 scroll-animate"
-                    data-animate="active"
-                  >
-                    <h6 className="name">
-                      <span> Docker </span>
-                    </h6>
-                  </div>
-                </div>
-              </div>
-
-              <div className="col-xs-6 col-sm-4 col-md-3 col-lg-3">
-                <div className="skills-items">
-                  <div
-                    className="skills-item scrolla-element-anim-1 scroll-animate"
-                    data-animate="active"
-                  >
-                    <h6 className="name">
-                      <span> Web3 </span>
-                    </h6>
-                  </div>
-                </div>
-              </div>
-
-              <div className="col-xs-6 col-sm-4 col-md-3 col-lg-3">
-                <div className="skills-items">
-                  <div
-                    className="skills-item scrolla-element-anim-1 scroll-animate"
-                    data-animate="active"
-                  >
-                    <h6 className="name">
-                      <span>Smart Contracts Integration </span>
-                    </h6>
-                  </div>
-                </div>
-              </div>
-
-              <div className="col-xs-6 col-sm-4 col-md-3 col-lg-3">
-                <div className="skills-items">
-                  <div
-                    className="skills-item scrolla-element-anim-1 scroll-animate"
-                    data-animate="active"
-                  >
-                    <h6 className="name">
-                      <span> SASS </span>
-                    </h6>
-                  </div>
-                </div>
-              </div>
-
-              <div className="col-xs-6 col-sm-4 col-md-3 col-lg-3">
-                <div className="skills-items">
-                  <div
-                    className="skills-item scrolla-element-anim-1 scroll-animate"
-                    data-animate="active"
-                  >
-                    <h6 className="name">
-                      <span> Git </span>
-                    </h6>
-                  </div>
-                </div>
-              </div>
-
-              <div className="col-xs-6 col-sm-4 col-md-3 col-lg-3">
-                <div className="skills-items">
-                  <div
-                    className="skills-item scrolla-element-anim-1 scroll-animate"
-                    data-animate="active"
-                  >
-                    <h6 className="name">
-                      <span> Jira </span>
-                    </h6>
-                  </div>
-                </div>
-              </div>
-
-              <div className="col-xs-6 col-sm-4 col-md-3 col-lg-3">
-                <div className="skills-items">
-                  <div
-                    className="skills-item scrolla-element-anim-1 scroll-animate"
-                    data-animate="active"
-                  >
-                    <h6 className="name">
-                      <span> Scrum </span>
-                    </h6>
-                  </div>
-                </div>
-              </div>
-
-              <div className="col-xs-6 col-sm-4 col-md-3 col-lg-3">
-                <div className="skills-items">
-                  <div
-                    className="skills-item scrolla-element-anim-1 scroll-animate"
-                    data-animate="active"
-                  >
-                    <h6 className="name">
-                      <span> Familiar with AWS </span>
-                    </h6>
-                  </div>
-                </div>
-              </div>
-
-              <div className="col-xs-6 col-sm-4 col-md-3 col-lg-3">
-                <div className="skills-items">
-                  <div
-                    className="skills-item scrolla-element-anim-1 scroll-animate"
-                    data-animate="active"
-                  >
-                    <h6 className="name">
-                      <span> Familiar with Node.js </span>
-                    </h6>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-xs-6 col-sm-4 col-md-3 col-lg-3">
-                <div class="skills-items">
-                  <div
-                    class="skills-item scrolla-element-anim-1 scroll-animate"
-                    data-animate="active"
-                  >
-                    <h6 class="name">
-                      <span> Familiar with Redis </span>
-                    </h6>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-xs-6 col-sm-4 col-md-3 col-lg-3">
-                <div class="skills-items">
-                  <div
-                    class="skills-item scrolla-element-anim-1 scroll-animate"
-                    data-animate="active"
-                  >
-                    <h6 class="name">
-                      <span> Familiar with MongoDB </span>
-                    </h6>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-xs-6 col-sm-4 col-md-3 col-lg-3">
-                <div class="skills-items">
-                  <div
-                    class="skills-item scrolla-element-anim-1 scroll-animate"
-                    data-animate="active"
-                  >
-                    <h6 class="name">
-                      <span> Familiar with Prisma </span>
-                    </h6>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-xs-6 col-sm-4 col-md-3 col-lg-3">
-                <div class="skills-items">
-                  <div
-                    class="skills-item scrolla-element-anim-1 scroll-animate"
-                    data-animate="active"
-                  >
-                    <h6 class="name">
-                      <span> Familiar with OpenAI </span>
-                    </h6>
-                  </div>
-                </div>
-              </div>
+                    <div
+                      className="skills-item scrolla-element-anim-1 scroll-animate"
+                      data-animate="active"
+                    >
+                      <h6 className="name">
+                        <span >{skill}</span>
+                      </h6>
+                    </div>
+                  </li>
+                ))}
+              </ul>
             </div>
+
             <div className="lui-bgtitle">
-              <span> Skills </span>
+              <span>Skills</span>
             </div>
           </div>
         </div>
+
       </section>
 
       {/* Section - Works */}
@@ -583,8 +281,7 @@ const Index = () => {
                 data-splitting="words"
                 data-animate="active"
               >
-                <span>
-                  {" "}
+                <span tabIndex={0}>
                   my <b>projects</b>
                 </span>
               </div>
