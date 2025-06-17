@@ -9,7 +9,6 @@ import Footer from "./Footer";
 import Header from "./Header";
 import GA4Script from "../../util/Ga4Script";
 
-import { RM } from '@request-metrics/browser-agent';
 
 
 const Layout = ({ children, pageClassName }) => {
@@ -24,9 +23,7 @@ const Layout = ({ children, pageClassName }) => {
     if (typeof window !== "undefined") {
       window.Splitting = require("splitting");
     }
-    RM.install({
-      token: "y9km6jb:t4wu3mc"
-    });
+
     Splitting();
     jarallaxAnimation();
     document.querySelector("body").className = pageClassName
