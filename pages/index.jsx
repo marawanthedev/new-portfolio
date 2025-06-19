@@ -35,7 +35,7 @@ const Index = () => {
                 className="content scrolla-element-anim-1 scroll-animate"
                 data-animate="active"
               >
-                <div className="titles focus-element" tabIndex={0}>
+                <div className="titles ">
                   <div className="lui-subtitle" >
                     <span >
                       {" "}
@@ -53,13 +53,13 @@ const Index = () => {
                   </h1>
 
                 </div>
-                <div className="label lui-subtitle focus-element" tabIndex={0}>
+                <div className="label lui-subtitle " >
                   {" "}
                   I am <strong>Software Engineer</strong>
                 </div>
                 <div className="description">
                   <div>
-                    <p className="focus-element" tabIndex={0}>
+                    <p >
                       I have over 4 years of front-end development experience,
                       specializing in React, Redux, and TypeScript. My work
                       spans various industries, including insuretech and NFT,

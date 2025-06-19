@@ -107,6 +107,7 @@ const Header = () => {
                 className={`switcher-btn focus-element ${day ? "" : "active"}`}
                 aria-label={day ? "Activate dark mode" : "Activate light mode"}
                 aria-describedby="themeDesc"
+                role="button"
                 aria-pressed={!day}
                 onClick={(e) => {
                   e.preventDefault();
@@ -147,7 +148,7 @@ const Header = () => {
                 </span>
               </a>
               {/* menu btn */}
-              <a href="#" className="menu-btn focus-element" aria-label={`${menuToggled ? "close" : 'open'} navigation menu`} aria-pressed={menuToggled} onClick={(e) => {
+              <a href="#" className="menu-btn focus-element" aria-label={`${menuToggled ? "close" : 'open'} navigation menu`} role="button" aria-pressed={menuToggled} onClick={(e) => {
                 toggleMenu(e)
                 setMenuToggled(true)
               }}>
