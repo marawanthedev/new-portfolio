@@ -21,8 +21,46 @@ const Index = () => {
   const [email, setEmail] = useState('');
   const [subject, setSubject] = useState('');
   const [message, setMessage] = useState('');
-  const swiperRef = useRef(null);
+  const testimonialSwiperRef = useRef(null);
+  const blogSwiperRef = useRef(null)
 
+  const blogs = [
+    {
+      date: 'July, 2024',
+      title: 'React Compound Design pattern',
+      image: 'assets/images/blogs/compound-pattern.jpeg',
+      link: 'https://www.linkedin.com/posts/marwan-mostafa-6112801a6_mastering-reusable-react-components-using-activity-7209911997587480576-R2wo?utm_source=share&utm_medium=member_desktop&rcm=ACoAADAYA20BfG4b6te8h187AkdKDcQVC09Fw2c',
+      desc: 'Struggling with React component reusability and customization? 🤔 Learn how the Compound Design Pattern can enhance flexibility and maintainability in our latest tutorial. 🚀 Click to discover practical tips for building scalable, adaptable UI components!'
+    },
+    {
+      date: 'June, 2024',
+      title: 'Use Transition Hook',
+      image: 'assets/images/blogs/use-transition.jpeg',
+      link: 'https://www.linkedin.com/posts/marwan-mostafa-6112801a6_mastering-usetransition-in-react-boost-your-activity-7204225328200720384-rNGE?utm_source=share&utm_medium=member_desktop&rcm=ACoAADAYA20BfG4b6te8h187AkdKDcQVC09Fw2c',
+      desc: 'Struggling with UI lag during heavy state updates in React? 🚀 Discover how `useTransition` can smooth out state transitions and keep your app responsive. 🎉 Learn practical tips and tricks to elevate your performance.'
+    },
+    {
+      date: 'June, 2024',
+      title: 'Git Commit Messages Standardization',
+      image: 'assets/images/blogs/git-commit.jpg',
+      link: 'https://www.linkedin.com/posts/marwan-mostafa-6112801a6_commit-msg-activity-7144744464601841664-gDep?utm_source=share&utm_medium=member_desktop&rcm=ACoAADAYA20BfG4b6te8h187AkdKDcQVC09Fw2c',
+      desc: '🚀 Exciting News in the World of Git Commit Message Standards! 🚀 Learn how to set up Git commit message restrictions using a specified pattern. Standardizing commit messages enhances collaboration and brings consistency across your team.'
+    },
+    {
+      date: 'June, 2024',
+      title: 'Deep Dive into CSS Layering',
+      image: 'assets/images/blogs/z-index.jpg',
+      link: 'https://www.linkedin.com/posts/marwan-mostafa-6112801a6_understanding-the-magic-of-z-index-in-css-activity-7129132049587744768-T9fV?utm_source=share&utm_medium=member_desktop&rcm=ACoAADAYA20BfG4b6te8h187AkdKDcQVC09Fw2c',
+      desc: "This week's spotlight is on the enigmatic z- index property—demystifying its secrets and equipping you with the skills to master its nuances.Learn how z - index behaves with parent - child relationships."
+    },
+    {
+      date: 'Jan, 2024',
+      title: 'Custom React.js Snippets',
+      image: 'assets/images/blogs/react-snippets.jpeg',
+      link: 'https://www.linkedin.com/posts/marwan-mostafa-6112801a6_efficient-react-code-snippet-setup-in-visual-activity-7126551094641504256-BebX?utm_source=share&utm_medium=member_desktop&rcm=ACoAADAYA20BfG4b6te8h187AkdKDcQVC09Fw2c',
+      desc: '🚀 Exciting News! 🚀 I’m starting a journey of knowledge sharing! 🌟 Click to explore our first tip on setting custom snippets and boost your coding efficiency.'
+    }
+  ];
   return (
     <Layout pageClassName={"home"}>
       {/* Section - Hero Started */}
@@ -325,7 +363,6 @@ const Index = () => {
           <div className="container">
             <Swiper
               {...testimonialsSliderProps}
-              onSwiper={(swiper) => (swiperRef.current = swiper)}
               className="swiper-container js-testimonials scrolla-element-anim-1 scroll-animate"
               data-animate="active"
             >
@@ -432,7 +469,7 @@ const Index = () => {
                         <span>Co-founder of Re:Crave</span>
                       </div>
 
-                      <Link className="testimonial-link focus-element" target="_blank" onFocus={() => swiperRef.current?.slideToLoop(1)} href="https://www.linkedin.com/in/marwan-mostafa-6112801a6/details/recommendations" >View Recommendation</Link>
+                      <Link className="testimonial-link focus-element" target="_blank" onFocus={() => testimonialSwiperRef.current?.slideToLoop(1)} href="https://www.linkedin.com/in/marwan-mostafa-6112801a6/details/recommendations" >View Recommendation</Link>
                     </div>
                     <div
                       className="bg-img"
@@ -485,7 +522,7 @@ const Index = () => {
                       <div className="author" style={{ marginBottom: '15px' }}>
                         <span>DevRel Engineer @SOON</span>
                       </div>
-                      <Link className="testimonial-link focus-element" target="_blank" onFocus={() => swiperRef.current?.slideToLoop(2)} href="https://www.linkedin.com/in/marwan-mostafa-6112801a6/details/recommendations" >View Recommendation</Link>
+                      <Link className="testimonial-link focus-element" target="_blank" onFocus={() => testimonialSwiperRef.current?.slideToLoop(2)} href="https://www.linkedin.com/in/marwan-mostafa-6112801a6/details/recommendations" >View Recommendation</Link>
                     </div>
                     <div
                       className="bg-img"
@@ -536,7 +573,7 @@ const Index = () => {
                       <div className="author" style={{ marginBottom: '15px' }}>
                         <span>Former colleague @QuickDesk</span>
                       </div>
-                      <Link className="testimonial-link focus-element" onFocus={() => swiperRef.current?.slideToLoop(3)} target="_blank" href="https://www.linkedin.com/in/marwan-mostafa-6112801a6/details/recommendations" >View Recommendation</Link>
+                      <Link className="testimonial-link focus-element" onFocus={() => testimonialSwiperRef.current?.slideToLoop(3)} target="_blank" href="https://www.linkedin.com/in/marwan-mostafa-6112801a6/details/recommendations" >View Recommendation</Link>
                     </div>
                     <div
                       className="bg-img"
@@ -582,143 +619,48 @@ const Index = () => {
         {/* Archive */}
         <div className="v-line v-line-right">
           <div className="container">
-            <div className="blog-items row">
-              <div className="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-                <div
-                  className="archive-item scrolla-element-anim-1 scroll-animate"
-                  data-animate="active"
-                >
-                  <div className="image">
-                    <Link legacyBehavior href="/blog-single">
-                      <a>
-                        <img
-                          decoding="async"
-                          src="assets/images/blogs/compound-pattern.jpeg"
-                          alt="Marwan Mostafa"
-                        />
-                      </a>
-                    </Link>
-                  </div>
-                  <div className="desc">
-                    <div className="category lui-subtitle">
-                      <span>July, 2024</span>
-                    </div>
-                    <h5 className="lui-title">React Compound Design pattern</h5>
-                    <div className="lui-text">
-                      <p>
-                        Struggling with React component reusability and
-                        customization? 🤔 Learn how the Compound Design Pattern
-                        can enhance flexibility and maintainability in our
-                        latest tutorial. 🚀 Click to discover practical tips for
-                        building scalable, adaptable UI components!
-                      </p>
-                      <div className="readmore">
+            <Swiper
+              {...testimonialsSliderProps}
+              onSwiper={(swiper) => (blogSwiperRef.current = swiper)}
+              className="swiper-container js-testimonials scrolla-element-anim-1 scroll-animate"
+              data-animate="active"
+            >
+              {blogs.map((blog, idx) => (
+                <SwiperSlide key={idx} className="swiper-slide">
+                  <div style={{ color: 'inherit', textDecoration: 'none' }} tabIndex={-1}>
+                    <div className="testimonials-item">
+                      <div className="image">
+                        <img decoding="async" src={blog.image} alt={blog.title} />
+                      </div>
+                      <div className="text lui-text">
+                        <p>{blog.desc}</p>
+                      </div>
+                      <div className="info">
+                        <h6 className="name">
+                          <span>{blog.title}</span>
+                        </h6>
+                        <div className="author" style={{ marginBottom: '15px' }}>
+                          <span>{blog.date}</span>
+                        </div>
                         <Link
-                          legacyBehavior
-                          href="https://www.linkedin.com/posts/marwan-ahmed-6112801a6_mastering-reusable-react-components-using-activity-7209911997587480576-fsT4?utm_source=share&utm_medium=member_desktop"
+                          className="testimonial-link focus-element"
+                          target="_blank"
+                          href={blog.link}
+                          onFocus={() => blogSwiperRef.current?.slideToLoop(idx)}
                         >
-                          <a className="lnk" target="_blank">
-                            Read more
-                          </a>
+                          Read More
                         </Link>
                       </div>
+                      <div
+                        className="bg-img"
+                        style={{ backgroundImage: 'url(assets/images/pat-2.png)' }}
+                      />
                     </div>
                   </div>
-                </div>
-              </div>
-              <div className="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-                <div
-                  className="archive-item scrolla-element-anim-1 scroll-animate"
-                  data-animate="active"
-                >
-                  <div className="image">
-                    <Link legacyBehavior href="/blog-single">
-                      <a>
-                        <img
-                          decoding="async"
-                          src="assets/images/blogs/use-transition.jpeg"
-                          alt="Marwan Mostafa"
-                          title="marwan developer use transition video"
-                        />
-                      </a>
-                    </Link>
-                  </div>
-                  <div className="desc">
-                    <div className="category lui-subtitle">
-                      <span>June, 2024</span>
-                    </div>
-                    <h5 className="lui-title">Use Transition Hook</h5>
-                    <div className="lui-text">
-                      <p>
-                        Struggling with UI lag during heavy state updates in
-                        React? 🚀 Discover how `useTransition` can smooth out
-                        state transitions and keep your app responsive. 🎉 Learn
-                        practical tips and tricks to elevate your performance.
-                        Don’t miss out—click to watch our tutorial and boost
-                        your React skills today!
-                      </p>
-                      <div className="readmore">
-                        <Link
-                          legacyBehavior
-                          href="https://www.linkedin.com/posts/marwan-ahmed-6112801a6_mastering-usetransition-in-react-boost-your-activity-7204225328200720384-QuWb?utm_source=share&utm_medium=member_desktop"
-                        >
-                          <a className="lnk" target="_blank">
-                            Read more
-                          </a>
-                        </Link>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-                <div
-                  className="archive-item scrolla-element-anim-1 scroll-animate"
-                  data-animate="active"
-                >
-                  <div className="image">
-                    <Link legacyBehavior href="/blog-single">
-                      <a>
-                        <img
-                          decoding="async"
-                          src="assets/images/blogs/react-snippets.jpeg"
-                          alt="Marwan Mostafa"
-                          title="marwan developer react snippets video"
-                        />
-                      </a>
-                    </Link>
-                  </div>
-                  <div className="desc">
-                    <div className="category lui-subtitle">
-                      <span>Jan , 2024</span>
-                    </div>
-                    <h5 className="lui-title">Custom React.js Snippets</h5>
-                    <div className="lui-text">
-                      <p>
-                        🚀 Exciting News! 🚀 I’m starting a journey of knowledge
-                        sharing and can’t wait for you to join me! 🌟 I’ll be
-                        posting tips to supercharge your development skills. 🎉
-                        Click to explore our first tip on setting custom
-                        snippets and boost your coding efficiency. Follow along
-                        for weekly updates and let’s elevate our skills
-                        together! 💡💻
-                      </p>
-                      <div className="readmore">
-                        <Link
-                          legacyBehavior
-                          href="https://www.linkedin.com/posts/marwan-ahmed-6112801a6_efficient-react-code-snippet-setup-in-visual-activity-7126551094641504256-uvOt?utm_source=share&utm_medium=member_desktop"
-                        >
-                          <a className="lnk" target="_blank">
-                            {" "}
-                            Read more
-                          </a>
-                        </Link>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+                </SwiperSlide>
+              ))}
+              <div className="swiper-pagination" />
+            </Swiper>
 
             <div className="lui-bgtitle">
               <span> Blog </span>
