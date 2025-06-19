@@ -105,7 +105,10 @@ const Resume = () => {
                       }
                     >
                       <span> {education.academy} </span>
+                      <button className="toggle-button focus-element" tabIndex={0} role="button">{educationToggle == education.id ? '-' : '+'}</button>
                     </h6>
+                    {/* <button className="toggle-button">+</button> */}
+
                     <div className="history-content">
                       <div className="subname">
                         <span> {education.title} </span>

@@ -2843,26 +2843,43 @@ hr {
 	cursor: pointer;
 }
 
-.history-item .name:after {
-	content: '-';
-	content: '+';
+.name-container {
+	position: relative;
+	border: 1px solid red;
+}
+
+.history-item .name .toggle-button {
 	position: absolute;
 	right: -24px;
 	bottom: -24px;
 	width: 48px;
 	height: 48px;
+	padding: 10px;
 	line-height: 40px;
 	background: #fff;
 	border-radius: 50%;
 	border: 2px solid #000;
 	box-shadow: 5px 5px rgb(0 0 0 / 20%);
 	font-weight: 400;
-	font-size: 30px;
+	font-size: 25px;
 	text-align: center;
 	transition: all 1.2s cubic-bezier(0.3, 0, 0.3, 1);
 	-webkit-transition: all 1.2s cubic-bezier(0.3, 0, 0.3, 1);
 	z-index: 2;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
+
+.history-item .name .toggle-button:hover {
+	background-color: #fff;
+	color: black;
+}
+
+.history-item .name .toggle-button:hover::before {
+	background-color: transparent;
+}
+
 
 .history-item .name:hover:after {
 	box-shadow: 0 0 rgb(0 0 0 / 20%);
@@ -2977,6 +2994,17 @@ hr {
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-size: contain;
+}
+
+.testimonial-link {
+	margin-top: 20px;
+	text-decoration: none;
+}
+
+.testimonial-link:hover,
+.testimonial-link:active,
+.testimonial-link:visited {
+	text-decoration: none;
 }
 
 .works-box.works-list .works-item .bg-img {
@@ -3416,6 +3444,17 @@ hr {
 .pricing-item .lui-text {
 	padding-bottom: 30px;
 	min-height: 145px;
+	border: 1px solid red;
+}
+
+.lui-text p {
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 6;
+	/* Clamp to 5 lines */
+	overflow: hidden;
+	text-overflow: ellipsis;
+	min-height: calc(1.5em * 7);
 }
 
 .pricing-item .lui-text p {

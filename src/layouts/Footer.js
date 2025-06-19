@@ -1,4 +1,6 @@
 const Footer = () => {
+  const currentYear = new Date().getFullYear();
+
   return (
     <div className="footer">
       <div className="footer__builder">
@@ -25,7 +27,7 @@ const Footer = () => {
                 className="copyright-text align-center scrolla-element-anim-1 scroll-animate"
                 data-animate="active"
               >
-                © 2024 <strong>Marwan Mostafa</strong>. All rights reserved
+                © {currentYear} <strong>Marwan Mostafa</strong>. All rights reserved
               </div>
             </div>
 
