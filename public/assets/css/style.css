@@ -1638,8 +1638,8 @@ hr {
 
 
 .focus-element:focus-visible {
-	outline: 1px solid #088567;
-	outline-offset: 10px;
+	outline: 1px solid #088567 !important;
+	outline-offset: 10px !important;
 }
 
 .header .logo {
@@ -3011,26 +3011,35 @@ hr {
 	position: relative;
 	z-index: 2;
 	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
 }
 
-.filter-links a {
-	margin-bottom: 20px;
-	margin-right: 20px;
-	margin-left: 20px;
+.filter-links button {
 	position: relative;
+	/* padding: 10px 20px; */
 	display: inline-block;
 	vertical-align: top;
 	color: #000;
 	text-decoration: none;
+	background-color: transparent;
+	box-shadow: none !important;
+	display: flex;
+	border: none;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	box-sizing: border-box;
 }
 
-.filter-links a:before {
-	margin-top: -2px;
+.filter-links button:before {
 	content: '';
 	position: absolute;
-	left: 0;
-	bottom: -10px;
-	width: 0;
+	top: 80%;
+	left: 50%;
+	width: 40px;
 	max-width: 60%;
 	height: 2px;
 	background: #29a587;
@@ -3040,12 +3049,12 @@ hr {
 	-o-transition: all 0.3s cubic-bezier(0.3, 0, 0.3, 1);
 }
 
-.filter-links a:hover:before,
-.filter-links a.active:before {
+.filter-links button:hover:before,
+.filter-links button.active:before {
 	width: 40px;
 }
 
-.filter-links a.active {
+.filter-links button.active {
 	color: #29a587;
 }
 

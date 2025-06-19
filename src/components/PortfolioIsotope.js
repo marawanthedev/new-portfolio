@@ -32,6 +32,7 @@ const PortfolioIsotope = ({ noViewMore }) => {
     setFilterKey(key);
   };
   const activeBtn = (value) => (value === filterKey ? "active" : "");
+
   return (
     <Fragment>
       <div className="works-box">
@@ -39,13 +40,13 @@ const PortfolioIsotope = ({ noViewMore }) => {
           className="filter-links scrolla-element-anim-1 scroll-animate"
           data-animate="active"
         >
-          <a
-            className={`c-pointer lui-subtitle ${activeBtn("*")}`}
+          <button
+            className={`c-pointer lui-subtitle focus-element ${activeBtn("*")}`}
             onClick={handleFilterKeyChange("*")}
             data-href=".works-col"
           >
             All
-          </a>
+          </button>
           {/* <a
             className={`c-pointer lui-subtitle ${activeBtn(
               "insuretech"
@@ -55,34 +56,34 @@ const PortfolioIsotope = ({ noViewMore }) => {
           >
             Insuretech
           </a> */}
-          <a
-            className={`c-pointer lui-subtitle ${activeBtn("sorting-web3")}`}
+          <button
+            className={`c-pointer lui-subtitle focus-element ${activeBtn("sorting-web3")}`}
             onClick={handleFilterKeyChange("sorting-web3")}
             data-href=".sorting-web3"
           >
             Web3
-          </a>
-          <a
-            className={`c-pointer lui-subtitle ${activeBtn(
+          </button>
+          <button
+            className={`c-pointer lui-subtitle  focus-element  ${activeBtn(
               "sorting-gifting"
             )}`}
             onClick={handleFilterKeyChange("sorting-gifting")}
             data-href=".sorting-gifting"
           >
             Gifting
-          </a>
-          <a
-            className={`c-pointer lui-subtitle ${activeBtn(
+          </button>
+          <button
+            className={`c-pointer lui-subtitle  focus-element  ${activeBtn(
               "sorting-ecommerce"
             )}`}
             onClick={handleFilterKeyChange("sorting-ecommerce")}
             data-href=".sorting-ecommerce"
           >
             E-Commerce
-          </a>
+          </button>
         </div>
-        <ul className="works-items works-masonry-items row list-none focus-element" aria-label="Projects" tabIndex={0} role="list" style={{ listStyleType: 'none' }}>
-          <li className="works-col col-xs-12 col-sm-12 col-md-12 col-lg-12 sorting-web3 focus-element" tabIndex={0} aria-label="RareApepes NFT Project">
+        <ul className="works-items works-masonry-items row list-none " aria-label="Projects" role="list" style={{ listStyleType: 'none' }}>
+          <li className="works-col col-xs-12 col-sm-12 col-md-12 col-lg-12 sorting-web3 " >
             <div
               className="works-item scrolla-element-anim-1 scroll-animate"
               data-animate="active"
@@ -90,10 +91,9 @@ const PortfolioIsotope = ({ noViewMore }) => {
               <div className="image">
                 <div className="img">
                   <Link legacyBehavior href="https://www.rareapepes.com">
-                    <a target="_blank">
+                    <a target="_blank" tabIndex={-1}>
                       <img
                         decoding="async"
-                        className="focus-element"
                         src="assets/images/projects/rareapepes/zombies.jpeg"
                         alt="Rare Apepes Landing Page Hero Banner"
                       />
@@ -103,19 +103,19 @@ const PortfolioIsotope = ({ noViewMore }) => {
                 </div>
               </div>
               <div className="desc">
-                <span className="category focus-element" tabIndex={0}> Web3,NFT </span>
+                <span className="category focus-element"> Web3,NFT </span>
                 <h5 className="name">
                   <Link legacyBehavior href="https://www.rareapepes.com">
-                    <a target="_blank" className="focus-element">RareApepes</a>
+                    <a target="_blank" tabIndex={-1}>RareApepes</a>
                   </Link>
                 </h5>
                 <div className="text">
-                  <p className="focus-element" tabIndex={0}>
+                  <p  >
                     Innovative NFT platform where users can connect their blockchain wallets to mint unique NFTs, generate custom memes, and explore a vibrant digital art community...
                   </p>
                 </div>
                 <Link legacyBehavior href="https://www.rareapepes.com/">
-                  <a className="lnk focus-element" aria-label="View Website" target="_blank">See project</a>
+                  <a className="lnk focus-element" aria-label="View Rare Apepes NFT Project" target="_blank" tabIndex={0}>See project</a>
                 </Link>
               </div>
               <div
@@ -127,7 +127,7 @@ const PortfolioIsotope = ({ noViewMore }) => {
             </div>
           </li>
 
-          <li className="works-col col-xs-12 col-sm-12 col-md-12 col-lg-12 sorting-gifting focus-element" tabIndex={0} aria-label="Recrave Project">
+          <li className="works-col col-xs-12 col-sm-12 col-md-12 col-lg-12 sorting-gifting" aria-label="Recrave Project">
             <div
               className="works-item scrolla-element-anim-1 scroll-animate"
               data-animate="active"
@@ -135,10 +135,9 @@ const PortfolioIsotope = ({ noViewMore }) => {
               <div className="image">
                 <div className="img">
                   <Link legacyBehavior href="https://admindashboard.marwan-mostafa.com">
-                    <a target="_blank">
+                    <a target="_blank" tabIndex={-1}>
                       <img
                         decoding="async"
-                        className="focus-element"
                         src="assets/images/projects/recrave/landing.png"
                         alt="Recrave Landing page"
                       />
@@ -148,19 +147,19 @@ const PortfolioIsotope = ({ noViewMore }) => {
                 </div>
               </div>
               <div className="desc">
-                <span className="category focus-element" tabIndex={0}> Gifting </span>
+                <span className="category"> Gifting </span>
                 <h5 className="name">
                   <Link legacyBehavior href="https://admindashboard.marwan-mostafa.com">
-                    <a target="_blank" className="focus-element">Recrave</a>
+                    <a target="_blank" tabIndex={-1}>Recrave</a>
                   </Link>
                 </h5>
                 <div className="text">
-                  <p className="focus-element" tabIndex={0}>
+                  <p className="focus-element">
                     ReCrave's internal dashboard streamlines the management of orders, vendors, and products, ensuring smooth operations...
                   </p>
                 </div>
                 <Link legacyBehavior href="https://admindashboard.marwan-mostafa.com">
-                  <a className="lnk focus-element" aria-label="view recrave project" target="_blank">See project</a>
+                  <a className="lnk focus-element" aria-label="View Recrave Admin Dashboard Project" target="_blank" tabIndex={0}>See project</a>
                 </Link>
               </div>
               <div
@@ -172,7 +171,7 @@ const PortfolioIsotope = ({ noViewMore }) => {
             </div>
           </li>
 
-          <li className="works-col col-xs-12 col-sm-12 col-md-12 col-lg-12 sorting-ecommerce" aria-label="Train Hard Project" tabIndex={0}>
+          <li className="works-col col-xs-12 col-sm-12 col-md-12 col-lg-12 sorting-ecommerce" aria-label="Train Hard Project">
             <div
               className="works-item scrolla-element-anim-1 scroll-animate"
               data-animate="active"
@@ -180,10 +179,9 @@ const PortfolioIsotope = ({ noViewMore }) => {
               <div className="image">
                 <div className="img">
                   <Link legacyBehavior href="https://trainhardeg.com/">
-                    <a target="_blank">
+                    <a target="_blank" tabIndex={-1}>
                       <img
                         decoding="async"
-                        className="focus-element"
                         src="assets/images/projects/trainhard/products.jpeg"
                         alt="Train Hard Landing page"
                       />
@@ -193,19 +191,19 @@ const PortfolioIsotope = ({ noViewMore }) => {
                 </div>
               </div>
               <div className="desc">
-                <span className="category focus-element" tabIndex={0}> E-Commerce, Supplements </span>
+                <span className="category"> E-Commerce, Supplements </span>
                 <h5 className="name">
                   <Link legacyBehavior href="https://trainhardeg.com/">
-                    <a target="_blank" className="focus-element">TrainHard</a>
+                    <a target="_blank" tabIndex={-1}>TrainHard</a>
                   </Link>
                 </h5>
                 <div className="text">
-                  <p className="focus-element" tabIndex={0}>
+                  <p>
                     TrainHard is a premier supplements store in Egypt, proudly serving customers for over three years...
                   </p>
                 </div>
                 <Link legacyBehavior href="https://trainhardeg.com/">
-                  <a className="lnk focus-element" aria-label="View Train hard project" target="_blank">See project</a>
+                  <a className="lnk focus-element" aria-label="View TrainHard Supplement website project" tabIndex={0} target="_blank">See project</a>
                 </Link>
               </div>
               <div

@@ -178,19 +178,17 @@ const Index = () => {
           <div className="container">
             <div className="m-titles align-center">
               <h2
-                className="m-title splitting-text-anim-1 focus-element scroll-animate"
+                className="m-title splitting-text-anim-1 scroll-animate"
                 data-splitting="words"
                 data-animate="active"
-                tabIndex={0}
                 style={{ marginTop: "20px" }}
               >
                 Professional Skills
               </h2>
               <div
-                className="m-subtitle splitting-text-anim-1 scroll-animate focus-element"
+                className="m-subtitle splitting-text-anim-1 scroll-animate "
                 data-splitting="words"
                 data-animate="active"
-                tabIndex={0}
                 style={{ marginTop: "10px" }}
               >
                 <span>
@@ -238,9 +236,8 @@ const Index = () => {
                 ].map((skill, i) => (
                   <li
                     key={i}
-                    className="col-xs-6 col-sm-4 col-md-3 col-lg-3 skills-items focus-element list-style-none"
+                    className="col-xs-6 col-sm-4 col-md-3 col-lg-3 skills-items list-style-none"
                     role="listitem"
-                    tabIndex={0}
                   >
                     <div
                       className="skills-item scrolla-element-anim-1 scroll-animate"
@@ -281,7 +278,7 @@ const Index = () => {
                 data-splitting="words"
                 data-animate="active"
               >
-                <span tabIndex={0}>
+                <span >
                   my <b>projects</b>
                 </span>
               </div>
