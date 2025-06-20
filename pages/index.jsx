@@ -26,6 +26,34 @@ const Index = () => {
 
   const blogs = [
     {
+      date: 'March, 2025',
+      title: 'Optimize Performance in React',
+      image: 'assets/images/blogs/react-performance.jpg',
+      link: 'https://www.linkedin.com/posts/marwan-mostafa-6112801a6_optimize-performance-in-react-lazy-load-activity-7295296977485938689-kRnC?utm_source=share&utm_medium=member_desktop&rcm=ACoAADAYA20BfG4b6te8h187AkdKDcQVC09Fw2c',
+      desc: "🚀 Boost Your React App’s Performance with Lazy Loading & Memoization! If your app struggles with rendering long lists, you might be doing it wrong! Instead of loading thousands of items at once, you can lazy load them efficiently using React Window.Combine that with memoization, and you’ll minimize unnecessary re- renders, making your UI smoother and faster."
+    },
+    {
+      date: 'February, 2025',
+      title: 'Improving Accessibility in React',
+      image: 'assets/images/blogs/screen-reader.jpg',
+      link: 'https://www.linkedin.com/posts/marwan-mostafa-6112801a6_make-your-chat-app-accessible-optimize-conversation-activity-7280866464515919872-C1a0?utm_source=share&utm_medium=member_desktop&rcm=ACoAADAYA20BfG4b6te8h187AkdKDcQVC09Fw2c',
+      desc: "As developers, we have the power to make technology accessible to everyone. Recently, I worked on optimizing a chat app’s UI for better screen reader support. Here's what we did:Updated the conversation list so screen readers announce: 'Chat with [Person]' for each conversation. Ensured users know exactly what will happen when interacting with each item."
+    },
+    {
+      date: 'January, 2025',
+      title: 'Browser Tabs Syncing',
+      image: 'assets/images/blogs/brower-tab-sync.jpg',
+      link: 'https://www.linkedin.com/posts/marwan-mostafa-6112801a6_sync-browser-tabs-seamlessly-with-broadcast-activity-7276661453145726978-VHHu?utm_source=share&utm_medium=member_desktop&rcm=ACoAADAYA20BfG4b6te8h187AkdKDcQVC09Fw2c',
+      desc: "Ever had a user make a payment on Tab 1, only for Tab 2 to still show outdated info—or worse, data they shouldn’t see? 😬These moments can frustrate users and even raise security concerns.But don’t worry, we’ve got the solution!I am here to show you how to sync your app’s state across browser tabs using the Broadcast Channel API. 🚀Here’s what you’ll learn"
+    },
+    {
+      date: 'August, 2024',
+      title: 'Real-Time Progress Bar',
+      image: 'assets/images/blogs/progress-bar.jpg',
+      link: 'https://www.linkedin.com/posts/marwan-mostafa-6112801a6_upgrade-your-form-ux-create-a-real-time-activity-7247267712295419905-pEck?utm_source=share&utm_medium=member_desktop&rcm=ACoAADAYA20BfG4b6te8h187AkdKDcQVC09Fw2c',
+      desc: "🚀 Tired of the same old spinner while submitting forms? It’s time to level up your UX game! In my latest video, I show you how to replace the outdated loading spinner with a progressive loading bar that accurately reflects how far along your form submission or process is."
+    },
+    {
       date: 'July, 2024',
       title: 'React Compound Design pattern',
       image: 'assets/images/blogs/compound-pattern.jpeg',
@@ -41,14 +69,14 @@ const Index = () => {
     },
     {
       date: 'June, 2024',
-      title: 'Git Commit Messages Standardization',
+      title: 'Git Commit Standardization',
       image: 'assets/images/blogs/git-commit.jpg',
       link: 'https://www.linkedin.com/posts/marwan-mostafa-6112801a6_commit-msg-activity-7144744464601841664-gDep?utm_source=share&utm_medium=member_desktop&rcm=ACoAADAYA20BfG4b6te8h187AkdKDcQVC09Fw2c',
       desc: '🚀 Exciting News in the World of Git Commit Message Standards! 🚀 Learn how to set up Git commit message restrictions using a specified pattern. Standardizing commit messages enhances collaboration and brings consistency across your team.'
     },
     {
       date: 'June, 2024',
-      title: 'Deep Dive into CSS Layering',
+      title: 'Dive into CSS Layering',
       image: 'assets/images/blogs/z-index.jpg',
       link: 'https://www.linkedin.com/posts/marwan-mostafa-6112801a6_understanding-the-magic-of-z-index-in-css-activity-7129132049587744768-T9fV?utm_source=share&utm_medium=member_desktop&rcm=ACoAADAYA20BfG4b6te8h187AkdKDcQVC09Fw2c',
       desc: "This week's spotlight is on the enigmatic z- index property—demystifying its secrets and equipping you with the skills to master its nuances.Learn how z - index behaves with parent - child relationships."
@@ -61,6 +89,15 @@ const Index = () => {
       desc: '🚀 Exciting News! 🚀 I’m starting a journey of knowledge sharing! 🌟 Click to explore our first tip on setting custom snippets and boost your coding efficiency.'
     }
   ];
+
+  function chunkArray(array, size) {
+    return Array.from({ length: Math.ceil(array.length / size) }, (_, i) =>
+      array.slice(i * size, i * size + size)
+    );
+  }
+
+  const groupedBlogs = chunkArray(blogs, 4); // 4 items = 2 rows x 2 columns
+
   return (
     <Layout pageClassName={"home"}>
       {/* Section - Hero Started */}
@@ -365,6 +402,7 @@ const Index = () => {
               {...testimonialsSliderProps}
               className="swiper-container js-testimonials scrolla-element-anim-1 scroll-animate"
               data-animate="active"
+              onSwiper={(swiper) => (testimonialSwiperRef.current = swiper)}
             >
               <SwiperSlide className="swiper-slide">
                 <div target="_blank" style={{ color: "inherit", textDecoration: 'none' }} tabIndex={-1}  >
@@ -618,43 +656,58 @@ const Index = () => {
         </div>
         {/* Archive */}
         <div className="v-line v-line-right">
-          <div className="container">
+          <div className="container" style={{ width: "100%", overflow: 'hidden', scrollBehavior: "smooth" }}>
             <Swiper
               {...testimonialsSliderProps}
-              onSwiper={(swiper) => (blogSwiperRef.current = swiper)}
+              slidesPerGroup={3}
               className="swiper-container js-testimonials scrolla-element-anim-1 scroll-animate"
               data-animate="active"
+              onSwiper={(swiper) => (blogSwiperRef.current = swiper)}
+
             >
               {blogs.map((blog, idx) => (
                 <SwiperSlide key={idx} className="swiper-slide">
-                  <div style={{ color: 'inherit', textDecoration: 'none' }} tabIndex={-1}>
-                    <div className="testimonials-item">
-                      <div className="image">
-                        <img decoding="async" src={blog.image} alt={blog.title} />
-                      </div>
-                      <div className="text lui-text">
-                        <p>{blog.desc}</p>
-                      </div>
-                      <div className="info">
-                        <h6 className="name">
-                          <span>{blog.title}</span>
-                        </h6>
-                        <div className="author" style={{ marginBottom: '15px' }}>
-                          <span>{blog.date}</span>
-                        </div>
-                        <Link
-                          className="testimonial-link focus-element"
-                          target="_blank"
-                          href={blog.link}
-                          onFocus={() => blogSwiperRef.current?.slideToLoop(idx)}
-                        >
-                          Read More
+                  <div className="">
+                    <div
+                      className="archive-item scrolla-element-anim-1 scroll-animate"
+                      data-animate="active"
+                    >
+                      <div
+                        className="image"
+                        style={{
+                          backgroundImage: `url(${blog.image})`,
+                          backgroundSize: 'cover',
+                          backgroundRepeat: 'no-repeat',
+                          backgroundPosition: 'center',
+                          width: '100%',
+                          height: '200px' // adjust as needed
+                        }}
+                      >
+                        <Link legacyBehavior href={blog.link}>
+                          <a tabIndex={-1} target="_blank" aria-label={`Read blog post: ${blog.title}`} style={{ display: 'block', width: '100%', height: '100%' }} />
                         </Link>
                       </div>
-                      <div
-                        className="bg-img"
-                        style={{ backgroundImage: 'url(assets/images/pat-2.png)' }}
-                      />
+                      <div className="desc">
+                        <div className="category lui-subtitle">
+                          <span>{blog.date}</span>
+                        </div>
+                        <h5 className="lui-title">{blog.title}</h5>
+                        <div className="lui-text">
+                          <p>
+                            {blog.desc}
+                          </p>
+                          <div className="readmore">
+                            <Link
+                              legacyBehavior
+                              href={blog.link}
+                            >
+                              <a className="lnk focus-element" target="_blank" oonFocus={() => blogSwiperRef.current?.slideToLoop(idx)}>
+                                Read more
+                              </a>
+                            </Link>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </SwiperSlide>

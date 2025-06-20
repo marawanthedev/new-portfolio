@@ -2999,6 +2999,7 @@ hr {
 .testimonial-link {
 	margin-top: 20px;
 	text-decoration: none;
+	color: #0b8668;
 }
 
 .testimonial-link:hover,
@@ -5005,6 +5006,10 @@ form.post-password-form label {
 @media only screen and (max-width: 580px) {
 	.comment-box__details span {
 		display: block;
+	}
+
+	.testimonials-item .bg-img {
+		display: none;
 	}
 
 	.section__comments .children {
