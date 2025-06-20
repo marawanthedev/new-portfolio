@@ -3312,7 +3312,19 @@ hr {
 
 .works-items.works-masonry-items .works-item .desc .text {
 	margin: 15px 0 0 0;
-	min-height: 125px;
+	min-height: 120px;
+	overflow: hidden;
+	padding-bottom: 8vh;
+}
+
+.works-items.works-masonry-items .works-item .desc .text p {
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 4;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: calc(1.5em * 4);
+	line-height: 1.5em;
 }
 
 .works-item:hover .image:before,
@@ -5467,6 +5479,14 @@ a.wp-block-button__link {
 	}
 
 	.container {
+		padding: 0 20px;
+	}
+
+	.filter-links button {
+		padding: 0 8px;
+	}
+
+	#resume-section {
 		padding: 0 20px;
 	}
 

@@ -779,7 +779,7 @@ const Index = () => {
                       <span> Email </span>
                     </div>
                     <div className="lui-text">
-                      <span> <a target="_blank" href="mailto:jobs@marwan-mostafa.com" style={{ color: "inherit" }}>jobs@marwan-mostafa.com</a> </span>
+                      <span> <a target="_blank" className="focus-element" href="mailto:jobs@marwan-mostafa.com" style={{ color: "inherit" }}>jobs@marwan-mostafa.com</a> </span>
                     </div>
                   </div>
                   <div

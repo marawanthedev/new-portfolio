@@ -64,6 +64,13 @@ const PortfolioIsotope = ({ noViewMore }) => {
             Web3
           </button>
           <button
+            className={`c-pointer lui-subtitle focus-element ${activeBtn("sorting-agency")}`}
+            onClick={handleFilterKeyChange("sorting-agency")}
+            data-href=".sorting-agency"
+          >
+            Agency
+          </button>
+          {/* <button
             className={`c-pointer lui-subtitle  focus-element  ${activeBtn(
               "sorting-gifting"
             )}`}
@@ -71,7 +78,7 @@ const PortfolioIsotope = ({ noViewMore }) => {
             data-href=".sorting-gifting"
           >
             Gifting
-          </button>
+          </button> */}
           <button
             className={`c-pointer lui-subtitle  focus-element  ${activeBtn(
               "sorting-ecommerce"
@@ -83,6 +90,51 @@ const PortfolioIsotope = ({ noViewMore }) => {
           </button>
         </div>
         <ul className="works-items works-masonry-items row list-none " aria-label="Projects" role="list" style={{ listStyleType: 'none' }}>
+
+          <li className="works-col col-xs-12 col-sm-12 col-md-12 col-lg-12 sorting-agency " >
+            <div
+              className="works-item scrolla-element-anim-1 scroll-animate"
+              data-animate="active"
+            >
+              <div className="image">
+                <div className="img">
+                  <Link legacyBehavior href="https://staging.hipdigital.agency/">
+                    <a target="_blank" tabIndex={-1}>
+                      <img
+                        decoding="async"
+                        src="assets/images/projects/hip/hip-digital.png"
+                        alt="HIP Digital Landing Page Hero Banner"
+                      />
+                      <span className="overlay" />
+                    </a>
+                  </Link>
+                </div>
+              </div>
+              <div className="desc">
+                <span className="category focus-element"> Agency </span>
+                <h5 className="name">
+                  <Link legacyBehavior href="https://staging.hipdigital.agency/">
+                    <a target="_blank" tabIndex={-1}>HIP Digital</a>
+                  </Link>
+                </h5>
+                <div className="text">
+                  <p>
+                    HIP Digital Agency, a dynamic and ambitious digital agency, their core mission is to partner with clients, working collaboratively to understand unique challenges and deliver exceptional digital results — from content marketing to website design, development, and project management
+                  </p>
+                </div>
+                <Link legacyBehavior href="https://staging.hipdigital.agency/">
+                  <a className="lnk focus-element" aria-label="View Rare Apepes NFT Project" target="_blank" tabIndex={0}>See project</a>
+                </Link>
+              </div>
+              <div
+                className="bg-img"
+                style={{
+                  backgroundImage: "url(assets/images/pat-2.png)",
+                }}
+              />
+            </div>
+          </li>
+
           <li className="works-col col-xs-12 col-sm-12 col-md-12 col-lg-12 sorting-web3 " >
             <div
               className="works-item scrolla-element-anim-1 scroll-animate"
@@ -127,7 +179,7 @@ const PortfolioIsotope = ({ noViewMore }) => {
             </div>
           </li>
 
-          <li className="works-col col-xs-12 col-sm-12 col-md-12 col-lg-12 sorting-gifting" aria-label="Recrave Project">
+          {/* <li className="works-col col-xs-12 col-sm-12 col-md-12 col-lg-12 sorting-gifting" aria-label="Recrave Project">
             <div
               className="works-item scrolla-element-anim-1 scroll-animate"
               data-animate="active"
@@ -169,7 +221,7 @@ const PortfolioIsotope = ({ noViewMore }) => {
                 }}
               />
             </div>
-          </li>
+          </li> */}
 
           <li className="works-col col-xs-12 col-sm-12 col-md-12 col-lg-12 sorting-ecommerce" aria-label="Train Hard Project">
             <div
